@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class FixtureController extends Controller
 {
-
     public function index()
     {
         $fixtures = Fixture::all();
