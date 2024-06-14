@@ -1,4 +1,4 @@
-{{-- <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <div class="container">
     <h1 class="text-center">Team News</h1>
     @foreach ($news as $article)
@@ -10,4 +10,4 @@
 
         </div>
     @endforeach
-</div> --}}
+</div>
