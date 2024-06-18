@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Result extends Model
+class NewUsers extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'home_team',
-        'away_team',
-        'date',
-
+        'first_name',
+        'last_name',
+        'email',
+        'password',
     ];
 }

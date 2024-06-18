@@ -6,8 +6,9 @@ use App\Http\Controllers\WomenController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\SeniorController;
 use App\Http\Controllers\FixtureController;
-use App\Http\Controllers\ResultsController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AcademyPlayerController;
+use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('/layouts.nav');
@@ -22,4 +23,9 @@ Route::get('/seniors', [SeniorController::class, 'index']);
 Route::get('/women', [WomenController::class, 'index']);
 Route::get('/academyplayers', [AcademyPlayerController::class, 'index']);
 Route::get('/players', [PlayerController::class, 'index']);
-Route::get('/results', [ResultsController::class, 'index']);
+
+Route::get('/register', [RegisterController::class, 'register']);
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'store']);
