@@ -13,6 +13,7 @@ Route::get('/', function () {
 });
 
 Route::get('/news', [NewsController::class, 'index']);
+Route::get('/news/show/{id}', [NewsController::class, 'show']);
 Route::get('/fixtures', [FixtureController::class, 'index']);
 Route::get('/seniors', [SeniorController::class, 'index']);
 Route::get('/women', [WomenController::class, 'index']);

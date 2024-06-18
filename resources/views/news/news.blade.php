@@ -11,16 +11,21 @@
             </ul>
         </div>
     </nav>
-@endsection
-{{-- <div class="container">
-    <h1 class="text-center">Team News</h1>
-    @foreach ($news as $article)
-        <div class="news-article">
-            <h2>{{ $article->title }}</h2>
-            <img src="{{ $article->image }}" alt="{{ $article->title }}">
-            <p>{{ $article->body }}</p>
-            <p class="underline italic text-sm text-blue-500">published by{{ $article->author }}</p>
+    <div class="container mx-auto">
+        <h1 class="text-center text-3xl font-bold mb-8">Team News</h1>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach ($news as $article)
+                <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transition transform hover:scale-105"
+                    onclick="window.location.href='route{{ 'new.show', $article->id }}">
+                    <img src="{{ $article->image }}" alt="{{ $article->title }}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold mb-2">{{ $article->title }}</h2>
+                        <p class="text-gray-700 mb-4">{{ $article->excerpt }}</p>
+                        <p class="text-sm text-blue-500">Published by {{ $article->author }}</p>
+                    </div>
+                </div>
+            @endforeach
         </div>
-    @endforeach
-</div> --}}
+    </div>
+@endsection

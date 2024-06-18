@@ -7,9 +7,14 @@ use Illuminate\Http\Request;
 
 class WomenController extends Controller
 {
+    // Controller logic to fetch players
     public function index()
     {
         $women = Women::all();
-        return view('women.women', compact('women'));
+
+        // Group players by position
+        $playersByPosition = $women->groupBy('position');
+
+        return view('women.women', compact('playersByPosition'));
     }
 }

@@ -9,7 +9,14 @@ class SeniorController extends Controller
 {
     public function index()
     {
+        //fetch data
         $seniors = Senior::all();
-        return view('senior.seniors', compact('seniors'));
+
+        // group by position
+        $playersByPosition = $seniors->groupBy('position');
+
+
+        // pass view/return view
+        return view('senior.seniors', compact('playersByPosition'));
     }
 }

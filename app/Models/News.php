@@ -15,5 +15,6 @@ class News extends Model
         'author',
         'pubished_at',
         'image',
+        'video'
     ];
 }
