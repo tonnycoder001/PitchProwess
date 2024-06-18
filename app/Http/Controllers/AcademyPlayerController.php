@@ -9,7 +9,7 @@ class AcademyPlayerController extends Controller
 {
     public function index()
     {
-        $academyplayers = AcademyPlayer::all();
-        return view('academyplayer.academyplayers', compact('academyplayers'));
+        $academyplayer = AcademyPlayer::all();
+        return view('academyplayer.academyplayers', compact('academyplayer'));
     }
 }
