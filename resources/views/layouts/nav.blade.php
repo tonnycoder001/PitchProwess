@@ -12,7 +12,7 @@
     <nav class="bg-red-800 p-8">
         <div class="container mx-auto flex ">
             <ul class="flex space-x-4">
-                <li><a href="/fixtures" class="text-white hover:text-gray-400">FIXTURES</a></li>
+                <li><a href="/fixtures" class="text-white hover:text-gray-400">FIXTURES & RESULTS</a></li>
                 <li><a href="/players" class="text-white hover:text-gray-400">PLAYERS</a></li>
                 <li><a href="/news" class="text-white hover:text-gray-400">NEWS</a></li>
             </ul>

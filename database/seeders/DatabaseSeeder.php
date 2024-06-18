@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\AcademyPlayer;
+use App\Models\News;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Women;
 use App\Models\Senior;
+use App\Models\AcademyPlayer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,8 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Senior::factory()->count(15)->create();
-        Women::factory()->count(15)->create();
-        AcademyPlayer::factory()->count(15)->create();
+
+        News::factory()->count(15)->create();
     }
 }
