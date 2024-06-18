@@ -26,7 +26,7 @@ class FormatCode extends Command
     public function handle()
     {
         $this->info('Formatting PHP code with PHP-CS-Fixer...');
-        $this->runProcess(['vendor/bin/php-cs-fixer', 'fix', '/Users/anthonykahihia/Herd']);
+        $this->runProcess(['vendor/bin/php-cs-fixer', 'fix', '/Users/anthonykahihia/Herd/pneumatika']);
 
 
         $this->info('Code formatting completed.');

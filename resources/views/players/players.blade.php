@@ -1,5 +1,6 @@
 @extends('layouts.nav')
 @section('content')
+    {{-- Men --}}
     <div class="container mx-auto flex justify-center p-12">
         <div class="relative w-full max-w-7xl h-100 cursor-pointer overflow-hidden rounded-lg shadow-lg"
             onclick="window.location.href='profile-page.html'">
@@ -11,7 +12,7 @@
         </div>
     </div>
 
-    {{-- women academy  --}}
+    {{-- women --}}
     <div class="pt-12">
         <div class="container mx-auto flex justify-center space-x-12">
             <div class="relative w-full max-w-7xl h-100 cursor-pointer overflow-hidden rounded-lg shadow-lg"
