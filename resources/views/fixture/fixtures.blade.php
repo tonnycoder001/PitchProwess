@@ -4,7 +4,7 @@
 
     @include('layouts.pages')
 
-    <div class="container mx-auto p-6">
+    <div class="container mx-auto pb-12 p-6">
         @foreach ($fixtures as $fixture)
             <div class="w-full lg:w-3/4 xl:w-1/2 mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
                 <div class="p-4">
@@ -39,7 +39,8 @@
                         </svg>
                         <p>{{ $fixture->date }}</p>
                     </div>
-                    <p>{{ $fixture->result }}</p>
+
+                    <p>RESULTS {{ $fixture->result }}</p>
                 </div>
             </div>
         @endforeach
@@ -47,4 +48,5 @@
     </body>
 
     </html>
+    @include('layouts.footer')
 @endsection

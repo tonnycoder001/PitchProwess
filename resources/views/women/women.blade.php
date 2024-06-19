@@ -2,7 +2,7 @@
 
 @section('content')
     @include('layouts.all')
-    <div class="container mx-auto pt-6">
+    <div class="container mx-auto pb-12 pt-6">
         @foreach ($playersByPosition as $position => $players)
             <h2 class="font-bold text-4xl pt-12 pb-8">{{ ucfirst($position) }}</h2>
             <hr class="mb-4 border-t-2 border-gray-300"> <!-- Horizontal line -->
@@ -24,4 +24,5 @@
             </div>
         @endforeach
     </div>
+    @include('layouts.footer')
 @endsection
