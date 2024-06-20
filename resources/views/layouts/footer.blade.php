@@ -1,7 +1,4 @@
 <script src="https://cdn.tailwindcss.com"></script>
-
-
-
 <footer class="bg-gray-800 py-6 mt-auto pt-12">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div class="flex space-x-6">
@@ -53,7 +50,7 @@
 
         </div>
         <div class="text-sm text-gray-500">
-            &copy; 2024 Pneumatika. All rights reserved.
+            &copy; 2024 Pneumatika FC. All rights reserved.
         </div>
     </div>
 </footer>
