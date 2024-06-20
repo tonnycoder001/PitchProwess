@@ -39,7 +39,7 @@ class FixtureResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('result')
-                    ->maxLength(255),
+                    ->maxLength(255)->nullable(),
             ]);
     }
 

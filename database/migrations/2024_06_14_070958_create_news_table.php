@@ -16,7 +16,7 @@ return new class() extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('author');
-            $table->dateTime('pubished_at');
+            $table->dateTime('published_at'); // Corrected column name
             $table->string('image')->nullable();
             $table->timestamps();
         });

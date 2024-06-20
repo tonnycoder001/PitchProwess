@@ -40,7 +40,7 @@ class TournamentResource extends Resource
                 Forms\Components\TextInput::make('time')
                     ->required(),
                 Forms\Components\TextInput::make('results')
-                    ->required()
+                    ->nullable()
                     ->maxLength(255),
             ]);
     }

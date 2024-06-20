@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\Women;
 use App\Models\Senior;
 use App\Models\AcademyPlayer;
+use App\Models\Fixture;
+use App\Models\Tournament;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +20,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+
+
         News::factory()->count(15)->create();
+        Fixture::factory()->count(15)->create();
     }
 }
