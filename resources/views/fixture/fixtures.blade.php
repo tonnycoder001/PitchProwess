@@ -1,10 +1,8 @@
 @extends('layouts.nav')
 @section('content')
-    @include('layouts.include')
-
     @include('layouts.pages')
 
-    <div class="container mx-auto p-6">
+    <div class="container mx-auto p-6 pb-12">
         @foreach ($fixtures as $fixture)
             <div class="w-full lg:w-3/4 xl:w-1/2 mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-6">
                 <div class="p-4">
@@ -47,4 +45,5 @@
     </body>
 
     </html>
+    @include('layouts.footer')
 @endsection

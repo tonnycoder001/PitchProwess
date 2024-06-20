@@ -1,8 +1,6 @@
 @extends('layouts.nav')
 @section('content')
-    @include('layouts.include')
-
-    <div class="container mx-auto pt-6 flex flex-col items-center">
+    <div class="container mx-auto pt-6 flex flex-col items-center pb-12">
         @foreach ($tournament as $tournament)
             <div class="w-full max-w-lg rounded overflow-hidden shadow-lg bg-white my-4">
                 <div class="px-6 py-4">
@@ -21,4 +19,5 @@
             </div>
         @endforeach
     </div>
+    @include('layouts.footer')
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.nav')
 
 @section('content')
-    <div class="container mx-auto py-8">
+    <div class="container mx-auto py-8 pb-12">
         <h1 class="text-center text-4xl font-bold mb-12">Team News</h1>
 
         @foreach ($news as $article)
@@ -22,4 +22,5 @@
             </div>
         @endforeach
     </div>
+    @include('layouts.footer')
 @endsection

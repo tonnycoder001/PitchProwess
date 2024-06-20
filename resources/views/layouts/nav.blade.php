@@ -27,7 +27,9 @@
                 <img src="images/logo.png" alt="">
                 <li><a href="/fixtures" class="text-white hover:text-gray-400">FIXTURES & RESULTS</a></li>
                 <li><a href="/players" class="text-white hover:text-gray-400">PLAYERS</a></li>
-                <li><a href="/news" class="text-white hover:text-gray-400">NEWS</a></li>
+                <li><a href="/news" class="text-white hover:text-gray-400">LATEST</a></li>
+                <li><a href="/" class="text-white hover:text-gray-400">LEAGUE</a></li>
+                <li><a href="/" class="text-white hover:text-gray-400">FRIENDLY</a></li>
                 <li><a href="/tournaments" class="text-white hover:text-gray-400">TOURNAMENTS</a></li>
             </ul>
         </div>
