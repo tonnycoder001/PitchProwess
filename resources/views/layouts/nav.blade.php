@@ -43,23 +43,20 @@
         </div>
     </div>
 
+    < <nav class="bg-red-800 p-8">
+        <div class="container mx-auto flex ">
+            <ul class="flex space-x-4">
+                <img src="images/logo.png" alt="">
+                <li><a href="/fixtures" class="text-white hover:text-gray-400">FIXTURES & RESULTS</a></li>
+                <li><a href="/players" class="text-white hover:text-gray-400">PLAYERS</a></li>
+                <li><a href="/news" class="text-white hover:text-gray-400">LATEST</a></li>
+                <li><a href="/" class="text-white hover:text-gray-400">LEAGUE</a></li>
+                <li><a href="/" class="text-white hover:text-gray-400">FRIENDLY</a></li>
+                <li><a href="/tournaments" class="text-white hover:text-gray-400">TOURNAMENTS</a></li>
+            </ul>
 
-    <nav class="bg-red-800 p-2">
-        <div class="container mx-auto flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <!-- Logo/Image -->
-                <a href="/fixtures">
-                    <img src="images/logo.png" alt="Logo" class="h-20 rounded-full">
-                </a>
-                <ul class="flex space-x-8">
-
-                    <li><a href="/fixtures" class="text-white hover:text-gray-400">FIXTURES & RESULTS</a></li>
-                    <li><a href="/players" class="text-white hover:text-gray-400">PLAYERS</a></li>
-                    <li><a href="/news" class="text-white hover:text-gray-400">NEWS</a></li>
-                </ul>
-            </div>
         </div>
-    </nav>
-    @yield('content')
+        </nav>
+        @yield('content')
 
 </html>

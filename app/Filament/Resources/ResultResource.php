@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FixtureResource\Pages;
-use App\Filament\Resources\FixtureResource\RelationManagers;
-use App\Models\Fixture;
+use App\Filament\Resources\ResultResource\Pages;
+use App\Filament\Resources\ResultResource\RelationManagers;
+use App\Models\Result;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,12 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FixtureResource extends Resource
+class ResultResource extends Resource
 {
-    protected static ?string $model = Fixture::class;
+    protected static ?string $model = Result::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Matches';
-
+    protected static ?string $navigationGroup = 'Pages';
 
     public static function form(Form $form): Form
     {
@@ -33,13 +32,12 @@ class FixtureResource extends Resource
                     ->maxLength(255),
                 Forms\Components\DatePicker::make('date')
                     ->required(),
-                Forms\Components\TextInput::make('time')
-                    ->required(),
                 Forms\Components\TextInput::make('location')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('result')
-                    ->maxLength(255)->nullable(),
+                Forms\Components\TextInput::make('results')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -54,10 +52,9 @@ class FixtureResource extends Resource
                 Tables\Columns\TextColumn::make('date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('time'),
                 Tables\Columns\TextColumn::make('location')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('result')
+                Tables\Columns\TextColumn::make('results')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -85,7 +82,7 @@ class FixtureResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageFixtures::route('/'),
+            'index' => Pages\ManageResults::route('/'),
         ];
     }
 }
