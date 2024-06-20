@@ -19,20 +19,18 @@ class LoginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required']
         ]);
-        Auth::attempt($attributes); // attempt to authenticate the user
-
-        // request()->session()->regenerate(); // regenerate the session id
+        Auth::attempt($attributes);
         if (Auth::check()) {
-            return redirect('/');
+            return redirect('/fixtures');
         }
 
-        return redirect('/jobs');
+        return redirect('/fixtures');
     }
 
     public function destroy()
     {
         Auth::logout();
 
-        return redirect('/');
+        return redirect('/news');
     }
 }

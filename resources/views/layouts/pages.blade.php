@@ -11,7 +11,7 @@
         color: gray;
     }
 </style>
-<div class="pt-6">
+<div class="pt-4">
     <nav class=" bg-gray-800 p-6">
         <div class="container mx-auto flex ">
             <ul class="flex space-x-4">
