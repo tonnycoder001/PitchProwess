@@ -27,6 +27,7 @@
                 <li><a href="/fixtures" class="text-white hover:text-gray-400">FIXTURES & RESULTS</a></li>
                 <li><a href="/players" class="text-white hover:text-gray-400">PLAYERS</a></li>
                 <li><a href="/news" class="text-white hover:text-gray-400">NEWS</a></li>
+                <li><a href="/tournaments" class="text-white hover:text-gray-400">TOURNAMENTS</a></li>
             </ul>
         </div>
     </nav>

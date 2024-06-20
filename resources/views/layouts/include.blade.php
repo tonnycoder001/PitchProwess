@@ -4,7 +4,7 @@
             <ul class="flex space-x-4 font-bold">
                 <li><a href="" class="text-black hover:text-gray-400">LEAGUE</a></li>
                 <li><a href="" class="text-black hover:text-gray-400">FRIENDLY</a></li>
-                <li><a href="#" class="text-black hover:text-gray-400">TORNAMENTS</a></li>
+                <li><a href="/tournaments" class="text-black hover:text-gray-400">TOURNAMENTS</a></li>
             </ul>
         </div>
     </nav>
