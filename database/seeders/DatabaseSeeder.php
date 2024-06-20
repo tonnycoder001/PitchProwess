@@ -6,10 +6,11 @@ use App\Models\News;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Women;
+use App\Models\Result;
 use App\Models\Senior;
-use App\Models\AcademyPlayer;
 use App\Models\Fixture;
 use App\Models\Tournament;
+use App\Models\AcademyPlayer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +23,6 @@ class DatabaseSeeder extends Seeder
 
 
 
-        News::factory()->count(15)->create();
-        Fixture::factory()->count(15)->create();
+        Result::factory()->count(15)->create();
     }
 }
