@@ -50,7 +50,7 @@
 
         </div>
         <div class="text-sm text-gray-500">
-            &copy; 2024 Pneumatika FC. All rights reserved.
+            &copy; 2024 Pneumatika FC.
         </div>
     </div>
 </footer>
