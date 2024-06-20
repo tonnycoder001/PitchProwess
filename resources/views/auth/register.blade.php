@@ -1,11 +1,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
-
-
-
 <form action="" method="post" class="space-y-4">
     @csrf
-
-
     <div class="flex flex-col">
         <label for="name" class="text-sm mb-2">Name</label>
         <input type="text" id="name" name="name"
