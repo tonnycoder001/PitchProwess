@@ -24,5 +24,10 @@ class DatabaseSeeder extends Seeder
 
 
         Result::factory()->count(15)->create();
+        Fixture::factory()->count(15)->create();
+        Senior::factory()->count(15)->create();
+        Tournament::factory()->count(15)->create();
+        AcademyPlayer::factory()->count(15)->create();
+        News::factory()->count(15)->create();
     }
 }
