@@ -26,6 +26,8 @@ class PlayerResource extends Resource
 
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Players';
+
 
     public static function form(Form $form): Form
     {

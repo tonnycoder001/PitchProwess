@@ -21,4 +21,14 @@ class PlayerCategory
                 return 'Unknown';
         }
     }
+
+    public static function getLabel($value)
+    {
+        $labels = [
+            self::WOMEN => 'Women',
+            self::MEN => 'Men',
+            self::ACADEMY => 'Academy',
+        ];
+        return $labels[$value] ?? 'Unknown';
+    }
 }
