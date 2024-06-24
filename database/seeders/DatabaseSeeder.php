@@ -11,6 +11,7 @@ use App\Models\Senior;
 use App\Models\Fixture;
 use App\Models\Tournament;
 use App\Models\AcademyPlayer;
+use App\Models\Matches;
 use App\Models\Player;
 use Illuminate\Database\Seeder;
 
@@ -29,5 +30,6 @@ class DatabaseSeeder extends Seeder
         Tournament::factory()->count(15)->create();
         News::factory()->count(15)->create();
         Player::factory()->count(15)->create();
+        Matches::factory()->count(15)->create();
     }
 }

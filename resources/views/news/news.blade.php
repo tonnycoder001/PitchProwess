@@ -22,5 +22,7 @@
             </div>
         @endforeach
     </div>
-    @include('layouts.footer')
+    <section>
+        @include('layouts.footer')
+    </section>
 @endsection
