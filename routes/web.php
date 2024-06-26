@@ -15,8 +15,8 @@ use App\Http\Controllers\AcademyPlayerController;
 use App\Http\Controllers\AllPlayers;
 use App\Http\Controllers\Auth\RegisterController;
 
-Route::get('/fixtures', function () {
-    return view('/fixtures');
+Route::get('/', function () {
+    return view('welcome');
 });
 
 Route::get('/news', [NewsController::class, 'index']);
@@ -37,7 +37,6 @@ Route::get('/login', [LoginController::class, 'login']);
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
-Route::get('/tournaments', [TournamentController::class, 'index']);
 
 Route::get('/results', [ResultController::class, 'index']);
 
