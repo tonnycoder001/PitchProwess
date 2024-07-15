@@ -31,12 +31,17 @@
                 </svg>
             </a>
         </div>
-        <div class="flex space-x-4 mt-4 md:mt-0">
-            <a href="/login"
-                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Login</a>
-            <a href="/register"
-                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Register</a>
-        </div>
+        @guest
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="/login"
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Login</a>
+                <a href="/register"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Register</a>
+            </div>
+        @endguest
+
+
+
     </div>
 </footer>
 <footer class="bg-gray-900 text-white py-4 mt-auto">
@@ -54,6 +59,3 @@
         </div>
     </div>
 </footer>
-</body>
-
-</html>
