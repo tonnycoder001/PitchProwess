@@ -15,18 +15,22 @@ class FixtureFactory extends Factory
      *
      * @return array<string, mixed>
      */
-
     protected $model = Fixture::class;
-
     public function definition(): array
     {
         return [
-            'home_team' => $this->faker->name(),
-            'away_team' => $this->faker->name(),
-            'date' => $this->faker->date(),
-            'time' => $this->faker->time(),
-            'location' => $this->faker->address(),
-            'result' => $this->faker->numberBetween(2, 5)
+            'name' => $this->faker->name,
+            'home_team' => $this->faker->name,
+            'away_team' => $this->faker->name,
+            'location' => $this->faker->address,
+            'date' => $this->faker->date,
+            'time' => $this->faker->time,
+            'type' => $this->faker->randomElement(['league', 'tournament', 'friendly']),
+            'team' => $this->faker->name,
+
+
+
+            'team' => $this->faker->randomElement(['men', 'women', 'academy']),
         ];
     }
 }
