@@ -2,44 +2,52 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FixtureResource\Pages;
-use App\Filament\Resources\FixtureResource\RelationManagers;
-use App\Models\Fixture;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Fixture;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\DateTimePicker;
+use App\Filament\Resources\FixtureResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\FixtureResource\RelationManagers;
 
 class FixtureResource extends Resource
 {
     protected static ?string $model = Fixture::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Matches';
-
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('home_team')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('away_team')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\DatePicker::make('date')
+                TextInput::make('name')->required(),
+                TextInput::make('home_team')->required(),
+                TextInput::make('away_team')->required(),
+                TextInput::make('location')->required(),
+                DateTimePicker::make('date')->required(),
+                DateTimePicker::make('time')->required(),
+                Select::make('type')
+                    ->options([
+                        'league' => 'League',
+                        'tournament' => 'Tournament',
+                        'friendly' => 'Friendly',
+                    ])
                     ->required(),
-                Forms\Components\TextInput::make('time')
+                Select::make('team')
+                    ->options([
+                        'men' => 'men',
+                        'women' => 'women',
+                        'academy' => 'academy',
+                    ])
                     ->required(),
-                Forms\Components\TextInput::make('location')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('result')
-                    ->maxLength(255)->nullable(),
+                TextInput::make('results'),
             ]);
     }
 
@@ -47,33 +55,21 @@ class FixtureResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('home_team')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('away_team')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('date')
-                    ->date()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('time'),
-                Tables\Columns\TextColumn::make('location')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('result')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('name')->sortable()->searchable(),
+                TextColumn::make('home_team')->sortable()->searchable(),
+                TextColumn::make('away_team')->sortable()->searchable(),
+                TextColumn::make('location')->sortable()->searchable(),
+                TextColumn::make('date')->sortable(),
+                TextColumn::make('time')->sortable(),
+                TextColumn::make('type')->sortable(),
+                TextColumn::make('team')->sortable(),
+                TextColumn::make('results'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -82,10 +78,19 @@ class FixtureResource extends Resource
             ]);
     }
 
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageFixtures::route('/'),
+            'index' => Pages\ListFixtures::route('/'),
+            'create' => Pages\CreateFixture::route('/create'),
+            'edit' => Pages\EditFixture::route('/{record}/edit'),
         ];
     }
 }
