@@ -26,12 +26,12 @@
                     <div class="hidden md:flex space-x-8">
                         <a href="/news" class="hover:underline text-orange-800">LATEST</a>
                         <div class="relative group">
-                            <a href="#" class="hover:underline text-orange-800">FIXTURES</a>
+                            <a href="" class="hover:underline text-orange-800">FIXTURES</a>
                             <div
                                 class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
-                                <a href="/" class="block px-4 py-2 hover:bg-gray-100">LEAGUE</a>
-                                <a href="/" class="block px-4 py-2 hover:bg-gray-100">TOURNAMENT</a>
-                                <a href="/" class="block px-4 py-2 hover:bg-gray-100">FRIENDLIES</a>
+                                <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
+                                <a href="/fixtures.women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
+                                <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                             </div>
                         </div>
                         <a href="#" class="hover:underline text-orange-800">RESULTS</a>
@@ -48,7 +48,7 @@
 
                     </div>
                 </div>
-                <div class="hidden md:flex items-center">
+                <div class="flex items-center">
                     @guest
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="h-6 w-6 mr-2">
@@ -59,6 +59,23 @@
                             <a href="/register" class="text-lg font-semibold">Sign up</a>
                         </div>
                     @endguest
+                    @auth
+                        <div class="flex items-center space-x-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                            <div>
+                                <p class="text-black mr-6 uppercase">{{ auth()->user()->name }}</p>
+                            </div>
+                            <form action="{{ route('logout') }}" method="post" class="inline">
+                                @csrf
+                                <button type="submit"
+                                    class="text-black p-2 bg-red-500 rounded-full hover:bg-red-700 mr-4">Logout</button>
+                            </form>
+                        </div>
+                    @endauth
                 </div>
             </div>
 
@@ -150,7 +167,8 @@
                                         d="M18 2.25h-12A3.75 3.75 0 0 0 2.25 6v12A3.75 3.75 0 0 0 6 21.75h6.75v-6h-1.5v-2.25h1.5v-1.25c0-1.96 1.22-3.25 3-3.25a15.16 15.16 0 0 1 1.5.07v1.68h-1c-1 0-1.25.5-1.25 1.25v1.5h2.5l-.5 2.25h-2v6H18A3.75 3.75 0 0 0 21.75 18V6A3.75 3.75 0 0 0 18 2.25Z" />
                                 </svg>
                             </a>
-                            <a href="https://www.whatsapp.com" target="_blank" class="text-white hover:text-gray-400">
+                            <a href="https://www.whatsapp.com" target="_blank"
+                                class="text-white hover:text-gray-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -226,10 +244,6 @@
             </div>
         </div>
     </footer>
-</body>
-
-</html>
-
 </body>
 
 </html>
