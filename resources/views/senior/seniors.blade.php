@@ -1,50 +1,92 @@
-@extends('layouts.nav')
+<script src="https://cdn.tailwindcss.com"></script>
+<div class="container mx-auto px-4">
+    <h1 class="text-2xl font-bold text-center my-6">Men's Team</h1>
 
-@section('content')
-    @include('layouts.all')
-    {{-- <div class="container mx-auto pt-6 pb-12">
-        @foreach ($playersByPosition as $position => $players)
-            <h2 class="font-bold text-4xl pt-12 pb-8">{{ ucfirst($position) }}</h2>
-            <hr class="mb-4 border-t-2 border-gray-300">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                @foreach ($players as $player)
-                    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
-                        onclick="window.location.href=''">
-                        <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-64 object-cover">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
-                            <h2 class="text-white text-2xl font-bold">{{ $player->name }}</h2>
-                            <p class="text-white">Age: {{ $player->age }}</p>
-                            <p class="text-white">Foot: {{ $player->foot }}</p>
-                            <p class="text-white">Position: {{ $player->position }}</p>
-                            <p class="text-white">Nationality: {{ $player->nationality }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        @endforeach
-    </div> --}}
-
-    <div class="grid grid-cols-3 gap-4">
-        @foreach ($players as $player)
-            <a href="" class="block relative border border-gray-200 rounded-lg overflow-hidden">
-                <div class="relative h-64">
-                    <img src="{{ $player->image }}" alt="{{ $player->first_name }} {{ $player->last_name }}"
-                        class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white">
-                        <p class="font-bold text-lg">{{ $player->first_name }} {{ $player->last_name }}</p>
-                        <p>Age: {{ $player->age }}</p>
-                        <p>Position: {{ $player->position }}</p>
-                        <p>Foot: {{ $player->foot }}</p>
-                        <p>Nationality: {{ $player->nationality }}</p>
-                        <p>Jersey Number: {{ $player->jersey_number }}</p>
-                    </div>
+    <h2 class="text-xl font-semibold mt-6 mb-4">Goalkeepers</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach ($goalkeepers as $player)
+            <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ $player->image }}');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
                 </div>
-            </a>
+                <div class="relative p-6">
+                    <h5 class="text-xl font-bold mb-2 text-white">{{ $player->first_name }} {{ $player->last_name }}
+                    </h5>
+                    <p class="text-gray-200 mb-2">Age: {{ $player->age }}</p>
+                    <p class="text-gray-200 mb-2">Nationality: {{ $player->nationality }}</p>
+                    <p class="text-gray-200 mb-2">Foot: {{ $player->foot }}</p>
+                    <p class="text-gray-200 mb-2">Jersey Number: {{ $player->jersey_number }}</p>
+                    <p class="text-gray-200 mb-2">Position: {{ $player->position }}</p>
+                </div>
+            </div>
         @endforeach
     </div>
 
+    <div class="border-t border-gray-300 my-6"></div>
 
+    <h2 class="text-xl font-semibold mt-6 mb-4">Defenders</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach ($defenders as $player)
+            <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ $player->image }}');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                </div>
+                <div class="relative p-6">
+                    <h5 class="text-xl font-bold mb-2 text-white">{{ $player->first_name }} {{ $player->last_name }}
+                    </h5>
+                    <p class="text-gray-200 mb-2">Age: {{ $player->age }}</p>
+                    <p class="text-gray-200 mb-2">Nationality: {{ $player->nationality }}</p>
+                    <p class="text-gray-200 mb-2">Foot: {{ $player->foot }}</p>
+                    <p class="text-gray-200 mb-2">Jersey Number: {{ $player->jersey_number }}</p>
+                    <p class="text-gray-200 mb-2">Position: {{ $player->position }}</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
 
-    @include('layouts.footer')
-@endsection
+    <div class="border-t border-gray-300 my-6"></div>
+
+    <h2 class="text-xl font-semibold mt-6 mb-4">Midfielders</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach ($midfielders as $player)
+            <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('{{ $player->image }}');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                </div>
+                <div class="relative p-6">
+                    <h5 class="text-xl font-bold mb-2 text-white">{{ $player->first_name }} {{ $player->last_name }}
+                    </h5>
+                    <p class="text-gray-200 mb-2">Age: {{ $player->age }}</p>
+                    <p class="text-gray-200 mb-2">Nationality: {{ $player->nationality }}</p>
+                    <p class="text-gray-200 mb-2">Foot: {{ $player->foot }}</p>
+                    <p class="text-gray-200 mb-2">Jersey Number: {{ $player->jersey_number }}</p>
+                    <p class="text-gray-200 mb-2">Position: {{ $player->position }}</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+    <div class="border-t border-gray-300 my-6"></div>
+
+    <h2 class="text-xl font-semibold mt-6 mb-4">Forwards</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach ($forwards as $player)
+            <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('{{ $player->image }}');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                </div>
+                <div class="relative p-6">
+                    <h5 class="text-xl font-bold mb-2 text-white">{{ $player->first_name }} {{ $player->last_name }}
+                    </h5>
+                    <p class="text-gray-200 mb-2">Age: {{ $player->age }}</p>
+                    <p class="text-gray-200 mb-2">Nationality: {{ $player->nationality }}</p>
+                    <p class="text-gray-200 mb-2">Foot: {{ $player->foot }}</p>
+                    <p class="text-gray-200 mb-2">Jersey Number: {{ $player->jersey_number }}</p>
+                    <p class="text-gray-200 mb-2">Position: {{ $player->position }}</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
