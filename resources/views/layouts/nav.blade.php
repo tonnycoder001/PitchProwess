@@ -12,16 +12,18 @@
 
 <body>
 
-    <nav class="py-4">
+    <nav class="py-4 bg-red">
         <div class="container mx-auto flex items-center justify-between">
             <div class="flex items-center">
-                <span class="text-3xl font-bold text-orange-800">PNEUMATIKA<span class="text-xl">™</span></span>
+                <span class="text-3xl font-bold text-orange-800 hidden sm:block"><a href="/">PNEUMATIKA</a><span
+                        class="text-xl">™</span></span>
             </div>
             <div class="flex-1 flex justify-center">
-                <div class="hidden md:flex space-x-8">
-                    <a href="/news" class="hover:underline text-orange-800">LATEST</a>
+                <div class="md:flex space-x-8">
+                    <a href="/" class="hover:underline text-orange-800">Home</a>
+                    <a href="/news" class="hover:underline text-orange-800 hidden md:flex">Latest</a>
                     <div class="relative group">
-                        <a href="" class="hover:underline text-orange-800">FIXTURES</a>
+                        <a href="" class="hover:underline text-orange-800 hidden md:flex">Fixtures</a>
                         <div
                             class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
                             <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
@@ -29,16 +31,19 @@
                             <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                         </div>
                     </div>
-                    <a href="#" class="hover:underline text-orange-800">RESULTS</a>
+                    <a href="#" class="hover:underline text-orange-800 hidden md:flex">Results</a>
                     <div class="relative group">
-                        <a href="#" class="hover:underline text-orange-800">PLAYERS</a>
+                        <a href="#" class="hover:underline text-orange-800 hidden md:flex">Players</a>
                         <div
-                            class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
-                            <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Seniors</a>
+                            class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
+                            <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
                             <a href="/women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
                             <a href="/academyplayers" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                         </div>
+
                     </div>
+                    <a href="/components/donate" class="hover:underline text-orange-800  hidden md:flex">Donate</a>
+
                 </div>
             </div>
             <div class="flex items-center">
@@ -62,12 +67,13 @@
                         <div>
                             <p class="text-black mr-6 uppercase">{{ auth()->user()->name }}</p>
                         </div>
-                        <form action="{{ route('logout') }}" method="post" class="inline">
-                            @csrf
-                            <button type="submit"
-                                class="text-black p-2 bg-red-500 rounded-full hover:bg-red-700 mr-4">Logout</button>
-                        </form>
+
                     </div>
+                    <form action="{{ route('logout') }}" method="post" class="inline pt-2">
+                        @csrf
+                        <button type="submit"
+                            class="text-black p-2 bg-red-500 rounded-lg hover:bg-red-700 mr-4">Logout</button>
+                    </form>
                 @endauth
             </div>
         </div>

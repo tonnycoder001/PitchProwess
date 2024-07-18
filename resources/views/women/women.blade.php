@@ -1,6 +1,27 @@
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="container mx-auto px-4">
-    <h1 class="text-2xl font-bold text-center my-6">Women</h1>
+@include('layouts.nav')
+
+
+
+<div class="border-t border-gray-800 my-6"></div>
+
+<div class="flex-1 flex justify-center">
+    <div class=" md:flex space-x-8">
+        <div class="relative group">
+            <a href="/seniors" class="hover:underline text-black">Men's Team</a>
+        </div>
+        <div class="relative group">
+            <a href="/women" class="hover:underline text-black hidden md:flex">Women's Team</a>
+        </div>
+        <div class="relative group">
+            <a href="/academyplayers" class="hover:underline text-black">The Academy</a>
+        </div>
+
+
+    </div>
+</div>
+<div class="container mx-auto px-4 pb-12 pt-12">
+    <h1 class="text-2xl font-bold text-center my-6">Women's Team</h1>
 
     <h2 class="text-xl font-semibold mt-6 mb-4">Goalkeepers</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -90,3 +111,7 @@
         @endforeach
     </div>
 </div>
+@include('layouts.footer')
+</body>
+
+</html>

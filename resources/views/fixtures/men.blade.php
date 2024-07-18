@@ -31,7 +31,7 @@
                         <div class="container mx-auto flex justify-center items-center">
                             <ul class="flex space-x-4">
                                 <a href="/"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex">Home</a>
                                 <a href="{{ route('fixtures.men_league', ['team' => 'men']) }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                     role="menuitem">Men's League</a>

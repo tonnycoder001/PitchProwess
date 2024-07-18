@@ -17,16 +17,17 @@
 
 <body>
     <div class="hero min-h-screen background-darken" style="background-image: url('images/bg_3.jpg');">
-        <nav class="py-4">
-            <div class="container mx-auto flex items-center justify-between">
+        <nav class="py-4 ">
+            <div class="container mx-auto flex items-center justify-between ">
                 <div class="flex items-center">
-                    <span class="text-3xl font-bold text-orange-800">PNEUMATIKA<span class="text-xl">™</span></span>
+                    <span class="text-3xl font-bold text-orange-800 hidden sm:block">PNEUMATIKA<span
+                            class="text-xl">™</span></span>
                 </div>
                 <div class="flex-1 flex justify-center">
-                    <div class="hidden md:flex space-x-8">
-                        <a href="/news" class="hover:underline text-orange-800">LATEST</a>
+                    <div class=" md:flex space-x-8 text-center sm:text-left">
+                        <a href="/news" class="hover:underline text-orange-800  hidden md:flex">Latest</a>
                         <div class="relative group">
-                            <a href="" class="hover:underline text-orange-800">FIXTURES</a>
+                            <a href="#" class="hover:underline text-orange-800 ">Fixtures</a>
                             <div
                                 class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
                                 <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
@@ -34,21 +35,22 @@
                                 <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                             </div>
                         </div>
-                        <a href="#" class="hover:underline text-orange-800">RESULTS</a>
+                        <a href="#" class="hover:underline text-orange-800  hidden md:flex">Results</a>
                         <div class="relative group">
-                            <a href="#" class="hover:underline text-orange-800">PLAYERS</a>
+                            <a href="#" class="hover:underline text-orange-800  hidden md:flex">Players</a>
                             <div
-                                class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
-                                <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Seniors</a>
+                                class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
+                                <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
                                 <a href="/women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
                                 <a href="/academyplayers" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                             </div>
                         </div>
+                        <a href="/components/donate" class="hover:underline text-orange-800">Donate</a>
 
 
                     </div>
                 </div>
-                <div class="flex items-center">
+                <div class="flex items-center ">
                     @guest
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="h-6 w-6 mr-2">
@@ -72,7 +74,7 @@
                             <form action="{{ route('logout') }}" method="post" class="inline">
                                 @csrf
                                 <button type="submit"
-                                    class="text-black p-2 bg-red-500 rounded-full hover:bg-red-700 mr-4">Logout</button>
+                                    class="text-black p-2 bg-red-500 rounded-lg hover:bg-red-700 mr-4">Logout</button>
                             </form>
                         </div>
                     @endauth
@@ -81,8 +83,9 @@
 
         </nav>
 
-        <div class="flex items-center justify-center min-h-screen">
-            <div class="text-black max-w-2xl text-center p-6 bg-opacity-50 bg-white rounded-lg">
+        <div class="flex items-center justify-center min-h-screen ">
+            <div
+                class="text-black max-w-2xl text-center p-6 bg-opacity-50 bg-white rounded-lg sm:w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-4xl font-bold text-orange-800">Pneumatika FC: Where Passion Meets the Beautiful Game
                 </h1>
                 <p class="mt-4">
@@ -160,7 +163,8 @@
                                         d="M7.5 3h9a4.5 4.5 0 0 1 4.5 4.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3ZM16.5 2.25A1.125 1.125 0 1 1 15.375 3 1.125 1.125 0 0 1 16.5 2.25ZM12 7.5a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 12 7.5Z" />
                                 </svg>
                             </a>
-                            <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-gray-400">
+                            <a href="https://www.facebook.com" target="_blank"
+                                class="text-white hover:text-gray-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -221,22 +225,26 @@
                     </svg>
                 </a>
             </div>
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="/login"
-                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Login</a>
-                <a href="/register"
-                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Register</a>
-            </div>
+            @guest
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="/login"
+                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Login</a>
+                    <a href="/register"
+                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Register</a>
+                </div>
+            @endguest
+
         </div>
     </footer>
     <footer class="bg-gray-900 text-white py-4 mt-auto">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="flex flex-wrap justify-center md:justify-start space-x-4 text-sm mb-2 md:mb-0">
-                <a href="#" class="hover:text-gray-400">Contact Us</a>
-                <a href="#" class="hover:text-gray-400">Privacy & Policy</a>
-                <a href="#" class="hover:text-gray-400">Terms Of Use</a>
-                <a href="#" class="hover:text-gray-400">Accessibility</a>
-                <a href="#" class="hover:text-gray-400">Cookies</a>
+                <a href="/components/about_us" class="hover:text-gray-400">About Us</a>
+                <a href="/contacts" class="hover:text-gray-400">Contact Us</a>
+                <a href="/privacy_policy" class="hover:text-gray-400">Privacy & Policy</a>
+                <a href="/terms_of_use" class="hover:text-gray-400">Terms Of Use</a>
+                <a href="/components/donate" class="hover:text-gray-400">Donate</a>
+
 
             </div>
             <div class="text-sm text-gray-500">

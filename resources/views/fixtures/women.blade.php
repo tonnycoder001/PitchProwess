@@ -27,7 +27,8 @@
                     <nav class=" p-4">
                         <div class="container mx-auto flex justify-center items-center">
                             <ul class="flex space-x-4">
-                                <a href="/" class="block px-4 py-2 text-sm text-white hover:bg-gray-100">Home</a>
+                                <a href="/"
+                                    class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hidden md:flex">Home</a>
                                 <a href="{{ route('fixtures.women_league', ['team' => 'women']) }}"
                                     class="block px-4 py-2 text-sm text-white hover:bg-gray-100" role="menuitem">Women's
                                     League</a>

@@ -1,5 +1,25 @@
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="container mx-auto px-4">
+@include('layouts.nav')
+
+
+
+<div class="border-t border-gray-800 my-6"></div>
+
+<div class="flex-1 flex justify-center">
+    <div class=" md:flex space-x-8">
+        <div class="relative group">
+            <a href="/seniors" class="hover:underline text-black hidden md:flex">Men's Team</a>
+        </div>
+        <a href="/women" class="hover:underline text-black">Women's Team</a>
+        <div class="relative group">
+            <a href="/academyplayers" class="hover:underline text-black">The Academy</a>
+        </div>
+
+
+    </div>
+</div>
+<div class="container mx-auto px-4 pb-12 pt-12">
+
     <h1 class="text-2xl font-bold text-center my-6">Men's Team</h1>
 
     <h2 class="text-xl font-semibold mt-6 mb-4">Goalkeepers</h2>
@@ -90,3 +110,8 @@
         @endforeach
     </div>
 </div>
+
+@include('layouts.footer')
+</body>
+
+</html>
