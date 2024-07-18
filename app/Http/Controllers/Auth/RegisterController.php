@@ -27,6 +27,6 @@ class RegisterController extends Controller
 
         Auth::login($user);
 
-        return redirect('/fixtures')->with('success', 'Account created successfully.');
+        return redirect('/')->with('success', 'Account created successfully.');
     }
 }

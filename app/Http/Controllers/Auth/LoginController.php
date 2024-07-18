@@ -21,10 +21,10 @@ class LoginController extends Controller
         ]);
         Auth::attempt($attributes);
         if (Auth::check()) {
-            return redirect('/fixtures');
+            return redirect('/');
         }
 
-        return redirect('/fixtures');
+        return redirect('/');
     }
 
     public function destroy()
