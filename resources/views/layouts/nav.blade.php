@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pneumatika Fc</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
@@ -23,7 +23,7 @@
                     <a href="/" class="hover:underline text-orange-800">Home</a>
                     <a href="/news" class="hover:underline text-orange-800 hidden md:flex">Latest</a>
                     <div class="relative group">
-                        <a href="" class="hover:underline text-orange-800 hidden md:flex">Fixtures</a>
+                        <a href="#" class="hover:underline text-orange-800 hidden md:flex">Fixtures</a>
                         <div
                             class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
                             <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
