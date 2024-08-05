@@ -15,8 +15,12 @@ class News extends Model
         'title',
         'body',
         'author',
-        'pubished_at',
+        'published_at',
         'image',
 
     ];
+    public function getImageAttribute($value)
+    {
+        return $value ? asset('storage/' . $value) : null;
+    }
 }
