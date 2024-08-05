@@ -35,7 +35,7 @@ class NewsResource extends Resource
                 Forms\Components\TextInput::make('author')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\DateTimePicker::make('pubished_at')
+                Forms\Components\DateTimePicker::make('published_at')
                     ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image(),
@@ -52,7 +52,7 @@ class NewsResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('author')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('pubished_at')
+                Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
                     ->sortable(),
                 Tables\Columns\ImageColumn::make('image'),
