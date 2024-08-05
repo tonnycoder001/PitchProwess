@@ -20,9 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/news',  [NewsController::class, 'index']);
-Route::post('/news/{id}/like', [NewsController::class, 'like'])->name('news.like');
-Route::post('/news/{id}/comments', [NewsController::class, 'storeComment'])->name('comments.store');
-Route::get('/news.show/{id}', [NewsController::class, 'show']);
+Route::get('/news/show/{id}', [NewsController::class, 'show'])->name('article.show');
 
 
 Route::get('/players', [PlayerController::class, 'index']);
@@ -44,9 +42,6 @@ Route::get('/fixtures.academy', [FixtureController::class, 'academy']);
 Route::get('/seniors', [AllPlayers::class, 'men']);
 Route::get('/women', [AllPlayers::class, 'women']);
 Route::get('/academyplayers', [AllPlayers::class, 'academy']);
-
-
-
 
 
 Route::get('/fixtures/men_league', [FixtureController::class, 'league'])->name('fixtures.men_league');
