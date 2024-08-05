@@ -1,26 +1,21 @@
 <script src="https://cdn.tailwindcss.com"></script>
 @include('layouts.nav')
 <div class="border-t border-gray-800 my-6"></div>
-
-<div class=" mx-auto py-8 pb-12 p-6">
+<div class="mx-auto py-8 pb-12 p-6">
     <h1 class="text-center text-4xl font-bold mb-12">Team News</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
-        @foreach ($news as $article)
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 p-4">
-                    <h2 class="text-2xl font-semibold mb-2">{{ $article->title }}</h2>
-                    <p class="text-gray-700">{{ Str::limit(strip_tags($article->body), 150) }}</p>
-                    <div class="text-sm text-blue-500 italic mt-2">
-                        <span>Published by {{ $article->author }}</span> |
-                        <span>Published on {{ $article->created_at->format('F j, Y, g:i a') }}</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        @foreach ($news as $news)
+            <div class="relative group border rounded-lg overflow-hidden">
+                <a href="{{ route('article.show', $news->id) }}" class="block">
+                    <img src="{{ $news->image }}" alt="{{ $news->title }}" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-50 transition-opacity"></div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black via-transparent to-transparent">
+                        <h2 class="text-xl font-semibold">{{ $news->title }}</h2>
                     </div>
-                </div>
-                <div class="md:w-1/2 relative">
-                    <img src="{{ $article->image }}" alt="{{ $article->title }}"
-                        class="w-full h-64 md:h-full object-cover">
-                    <div class="absolute inset-0 bg-black opacity-40"></div>
-                </div>
+                </a>
+
             </div>
         @endforeach
     </div>
