@@ -42,6 +42,8 @@ Route::get('/fixtures.academy', [FixtureController::class, 'academy']);
 Route::get('/seniors', [AllPlayers::class, 'men']);
 Route::get('/women', [AllPlayers::class, 'women']);
 Route::get('/academyplayers', [AllPlayers::class, 'academy']);
+Route::get('/search', [AllPlayers::class, 'search'])->name('players.search');
+
 
 
 Route::get('/fixtures/men_league', [FixtureController::class, 'league'])->name('fixtures.men_league');

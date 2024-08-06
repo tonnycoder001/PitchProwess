@@ -8,22 +8,36 @@ use App\Enums\PlayerCategory;
 
 class AllPlayers extends Controller
 {
-
-
-
     public function men(Request $request)
     {
+        $query = $request->input('query');
+
         $goalkeepers = Player::where('category', PlayerCategory::MEN)
             ->where('position', 'Goalkeeper')
+            ->when($query, function ($q) use ($query) {
+                $q->where('first_name', 'like', "%{$query}%");
+            })
             ->get();
+
         $defenders = Player::where('category', PlayerCategory::MEN)
             ->where('position', 'Defender')
+            ->when($query, function ($q) use ($query) {
+                $q->where('first_name', 'like', "%{$query}%");
+            })
             ->get();
+
         $midfielders = Player::where('category', PlayerCategory::MEN)
             ->where('position', 'Midfielder')
+            ->when($query, function ($q) use ($query) {
+                $q->where('first_name', 'like', "%{$query}%");
+            })
             ->get();
+
         $forwards = Player::where('category', PlayerCategory::MEN)
             ->where('position', 'Forward')
+            ->when($query, function ($q) use ($query) {
+                $q->where('first_name', 'like', "%{$query}%");
+            })
             ->get();
 
         return view('senior.seniors', compact('goalkeepers', 'defenders', 'midfielders', 'forwards'));
@@ -63,5 +77,20 @@ class AllPlayers extends Controller
             ->get();
 
         return view('academyplayer.academyplayers', compact('goalkeepers', 'defenders', 'midfielders', 'forwards'));
+    }
+
+
+    // Similarly, update the women and academy methods
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $players = Player::when($query, function ($q) use ($query) {
+            $q->where('first_name', 'like', "%{$query}%");
+        })
+            ->get();
+
+        return view('search.search-results', compact('players'));
     }
 }

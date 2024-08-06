@@ -34,7 +34,7 @@
     </div>
 
     <div class="container mx-auto px-4 pb-12">
-        <h1 class="text-2xl font-bold text-center my-6">{{ ucfirst($team) }} Friendly Fixtures</h1>
+        <h1 class="text-2xl font-bold text-center my-12">{{ ucfirst($team) }} League Fixtures</h1>
         <div class="flex item-center justify-center">
             <div class="w-full md:w-1/2 lg:w-1/2">
                 <div class="grid grid-cols-1 gap-8">
