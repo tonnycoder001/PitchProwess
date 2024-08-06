@@ -1,13 +1,9 @@
 @include('layouts.nav')
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="container mx-auto py-8 relative">
-    <div class="relative">
-        <img src="{{ $news->image }}" alt="{{ $news->title }}" class="  mb-4">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50  p-4">
-            <h1 class="text-5xl font-bold pt-96 uppercase">{{ $news->title }}</h1>
-        </div>
-    </div>
+<div class="border-t border-gray-800 my-6"></div>
 
+<div class="container mx-auto py-8 relative">
+    <h1 class="text-5xl font-bold text-center uppercase">{{ $news->title }}</h1>
     <div class="max-w-3xl mx-auto px-4 pt-4">
         <p class="text-gray-700 mt-4">{{ $news->body }}</p>
     </div>

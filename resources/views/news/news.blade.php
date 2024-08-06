@@ -3,7 +3,6 @@
 
 <div class="border-t border-gray-800 my-6"></div>
 <div class="mx-auto py-8 pb-12 p-6">
-    <h1 class="text-center text-4xl font-bold mb-12">Team News</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         @foreach ($news as $article)
@@ -20,8 +19,8 @@
         @endforeach
     </div>
     <div class="mt-8">
-        {{ $news->links }}
     </div>
+    {{ $news->links() }}
 </div>
 
 @include('layouts.footer')
