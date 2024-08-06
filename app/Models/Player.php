@@ -21,4 +21,9 @@ class Player extends Model
         'image',
         'category'
     ];
+
+    public function getImageAttribute($value)
+    {
+        return $value ? asset('storage/' . $value) : null;
+    }
 }
