@@ -79,9 +79,6 @@ class AllPlayers extends Controller
         return view('academyplayer.academyplayers', compact('goalkeepers', 'defenders', 'midfielders', 'forwards'));
     }
 
-
-    // Similarly, update the women and academy methods
-
     public function search(Request $request)
     {
         $query = $request->input('query');
