@@ -37,7 +37,7 @@
                         </div>
                         <a href="#" class="hover:underline text-orange-800  hidden md:flex">Results</a>
                         <div class="relative group">
-                            <a href="#" class="hover:underline text-orange-800  hidden md:flex">Players</a>
+                            <a href="#" class="hover:underline text-orange-800 ">Players</a>
                             <div
                                 class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
                                 <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
@@ -241,8 +241,6 @@
             <div class="flex flex-wrap justify-center md:justify-start space-x-4 text-sm mb-2 md:mb-0">
                 <a href="/components/about_us" class="hover:text-gray-400">About Us</a>
                 <a href="/contacts" class="hover:text-gray-400">Contact Us</a>
-                <a href="/privacy_policy" class="hover:text-gray-400">Privacy & Policy</a>
-                <a href="/terms_of_use" class="hover:text-gray-400">Terms Of Use</a>
                 <a href="/components/donate" class="hover:text-gray-400">Donate</a>
 
 

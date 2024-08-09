@@ -49,8 +49,6 @@
         <div class="flex flex-wrap justify-center md:justify-start space-x-4 text-sm mb-2 md:mb-0">
             <a href="/components/about_us" class="hover:text-gray-400">About Us</a>
             <a href="/contacts" class="hover:text-gray-400">Contact Us</a>
-            <a href="/privacy_policy" class="hover:text-gray-400">Privacy & Policy</a>
-            <a href="/terms_of_use" class="hover:text-gray-400">Terms Of Use</a>
             <a href="/components/donate" class="hover:text-gray-400">Donate</a>
 
         </div>
