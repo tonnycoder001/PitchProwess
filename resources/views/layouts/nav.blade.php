@@ -31,7 +31,7 @@
                             <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                         </div>
                     </div>
-                    <a href="#" class="hover:underline text-orange-800 hidden md:flex">Results</a>
+                    {{-- <a href="#" class="hover:underline text-orange-800 hidden md:flex">Results</a> --}}
                     <div class="relative group">
                         <a href="#" class="hover:underline text-orange-800 hidden md:flex">Players</a>
                         <div

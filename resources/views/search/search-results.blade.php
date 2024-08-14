@@ -4,7 +4,11 @@
 <div class="min-h-screen flex flex-col mt-6">
 
     <div class="container mx-auto flex-grow">
+
+
         <h1 class="text-center mt-6 font-bold text-2xl">Search Results</h1>
+
+
 
         @if ($players->isEmpty())
             <p class="text-center mt-6 font-bold text-2xl">No players found.</p>

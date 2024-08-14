@@ -1,5 +1,6 @@
 @include('layouts.nav')
 <script src="https://cdn.tailwindcss.com"></script>
+<div class="border-t border-gray-300 my-2"></div>
 
 <div class="flex flex-col min-h-screen">
     <div class="container mx-auto py-8 flex-1">

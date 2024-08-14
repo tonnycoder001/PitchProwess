@@ -35,7 +35,7 @@
                                 <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                             </div>
                         </div>
-                        <a href="#" class="hover:underline text-orange-800  hidden md:flex">Results</a>
+                        {{-- <a href="#" class="hover:underline text-orange-800  hidden md:flex">Results</a> --}}
                         <div class="relative group">
                             <a href="#" class="hover:underline text-orange-800 ">Players</a>
                             <div
@@ -163,8 +163,7 @@
                                         d="M7.5 3h9a4.5 4.5 0 0 1 4.5 4.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3ZM16.5 2.25A1.125 1.125 0 1 1 15.375 3 1.125 1.125 0 0 1 16.5 2.25ZM12 7.5a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 12 7.5Z" />
                                 </svg>
                             </a>
-                            <a href="https://www.facebook.com" target="_blank"
-                                class="text-white hover:text-gray-400">
+                            <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-gray-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
