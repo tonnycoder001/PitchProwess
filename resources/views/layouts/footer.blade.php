@@ -1,4 +1,4 @@
-<script src="https://cdn.tailwindcss.com"></script>
+@vite('resources/css/app.css')
 <footer class="bg-gray-800 py-6 mt-auto pt-12">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div class="flex space-x-6">

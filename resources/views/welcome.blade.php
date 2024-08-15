@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pneumatika Fc</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
 
     <style>
         .background-darken {
@@ -35,7 +35,6 @@
                                 <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                             </div>
                         </div>
-                        {{-- <a href="#" class="hover:underline text-orange-800  hidden md:flex">Results</a> --}}
                         <div class="relative group">
                             <a href="#" class="hover:underline text-orange-800 ">Players</a>
                             <div

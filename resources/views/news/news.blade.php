@@ -1,4 +1,4 @@
-<script src="https://cdn.tailwindcss.com"></script>
+@vite('resources/css/app.css')
 @include('layouts.nav')
 
 <div class="border-t border-gray-800 my-6"></div>
