@@ -9,6 +9,7 @@
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "spatie/laravel-google-calendar": "^3.8",
         "spatie/laravel-permission": "^6.9"
     },
     "require-dev": {
