@@ -27,19 +27,25 @@
                 </div>
                 <div class="flex-1 flex justify-center">
                     <nav class=" p-4">
+                        @guest
+                            <h1 class="font-bold text-2xl">Log in or create an account to view all our men's matches
+                            </h1>
+                        @endguest
                         <div class="container mx-auto flex justify-center items-center">
                             <ul class="flex space-x-4">
                                 <a href="/"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex">Home</a>
-                                <a href="{{ route('fixtures.men_league', ['team' => 'men']) }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                    role="menuitem">Men's League</a>
-                                <a href="{{ route('fixtures.men_tournament', ['team' => 'men']) }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                    role="menuitem">Men's Tournament</a>
-                                <a href="{{ route('fixtures.men_friendly', ['team' => 'men']) }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                    role="menuitem">Men's Friendly</a>
+                                    class="block px-4 py-2 text-sm text-orange-800 hover:bg-gray-100 hidden md:flex">Home</a>
+                                @auth
+                                    <a href="{{ route('fixtures.men_league', ['team' => 'men']) }}"
+                                        class="block px-4 py-2 text-sm text-orange-800 hover:bg-gray-100"
+                                        role="menuitem">Men's League</a>
+                                    <a href="{{ route('fixtures.men_tournament', ['team' => 'men']) }}"
+                                        class="block px-4 py-2 text-sm text-orange-800 hover:bg-gray-100"
+                                        role="menuitem">Men's Tournament</a>
+                                    <a href="{{ route('fixtures.men_friendly', ['team' => 'men']) }}"
+                                        class="block px-4 py-2 text-sm text-orange-800 hover:bg-gray-100"
+                                        role="menuitem">Men's Friendly</a>
+                                @endauth
                             </ul>
                         </div>
                     </nav>
