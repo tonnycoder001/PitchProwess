@@ -1,4 +1,3 @@
-<script src="https://cdn.tailwindcss.com"></script>
 @include('layouts.nav')
 
 

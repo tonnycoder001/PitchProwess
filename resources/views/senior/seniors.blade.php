@@ -1,8 +1,4 @@
-<script src="https://cdn.tailwindcss.com"></script>
 @include('layouts.nav')
-
-
-
 <div class="border-t border-gray-500 my-2"></div>
 
 <div class="flex-1 flex justify-center">
