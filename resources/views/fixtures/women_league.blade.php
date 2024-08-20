@@ -18,11 +18,11 @@
             <div class="container mx-auto flex justify-center items-center">
                 <ul class="flex space-x-4">
                     <a href="{{ route('fixtures.women_league', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex"
-                        role="menuitem">Women's
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Women's
                         League</a>
                     <a href="{{ route('fixtures.women_tournament', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">women's
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex"
+                        role="menuitem">women's
                         Tournament</a>
                     <a href="{{ route('fixtures.women_friendly', ['team' => 'women']) }}"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">women's
@@ -33,14 +33,16 @@
     </div>
 
     <div class="container mx-auto px-4 pb-12">
-        <h1 class="text-2xl font-bold text-center my-12">{{ ucfirst($team) }} League Fixtures</h1>
+        <h1 class="text-2xl font-bold text-center my-6">{{ ucfirst($team) }} League Fixtures</h1>
         <div class="flex item-center justify-center">
             <div class="w-full md:w-1/2 lg:w-1/2">
                 <div class="grid grid-cols-1 gap-8">
                     @foreach ($fixtures as $fixture)
                         <div class="relative bg-white shadow-lg rounded-lg overflow-hidden p-8">
+                            <p class="mb-2 text-red-500">{{ $fixture->name }}</p>
                             <div class="flex justify-between items-center mb-1  ">
-                                <p class="text-gray-600 text-sm">{{ $fixture->date }} | Friendly</p>
+                                <p class="text-gray-600 text-sm">{{ $fixture->date }} | <span
+                                        class="text-red-500">Tournament</span></p>
                             </div>
                             <div class="flex justify-between items-center">
                                 <h5 class="text-base font-bold">{{ $fixture->home_team }}</h5>

@@ -36,8 +36,10 @@
                 <div class="grid grid-cols-1 gap-8">
                     @foreach ($fixtures as $fixture)
                         <div class="relative bg-white shadow-lg rounded-lg overflow-hidden p-8">
+                            <p class="mb-2 text-red-500">{{ $fixture->name }}</p>
                             <div class="flex justify-between items-center mb-1">
-                                <p class="text-gray-600 text-sm">{{ $fixture->date }} | Friendly</p>
+                                <p class="text-gray-600 text-sm">{{ $fixture->date }} | <span
+                                        class="text-red-500">Tournament</span></p>
                             </div>
                             <div class="flex justify-between items-center">
                                 <h5 class="text-base font-bold">{{ $fixture->home_team }}</h5>

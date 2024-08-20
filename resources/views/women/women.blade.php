@@ -34,7 +34,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         @foreach ($goalkeepers as $player)
             <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-96 object-cover">
+                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-100 object-cover">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold mb-2">{{ $player->first_name }} {{ $player->last_name }}</h2>
                     <p class="text-gray-700 font-semibold">Age: {{ $player->age }}</p>
@@ -53,7 +53,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         @foreach ($defenders as $player)
             <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-96 object-cover">
+                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-100 object-cover">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold mb-2">{{ $player->first_name }} {{ $player->last_name }}</h2>
                     <p class="text-gray-700 font-semibold">Age: {{ $player->age }}</p>
@@ -71,7 +71,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         @foreach ($midfielders as $player)
             <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-96 object-cover">
+                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-100 object-cover">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold mb-2">{{ $player->first_name }} {{ $player->last_name }}</h2>
                     <p class="text-gray-700 font-semibold">Age: {{ $player->age }}</p>
@@ -90,7 +90,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         @foreach ($forwards as $player)
             <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-96 object-cover">
+                <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-100 object-cover">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold mb-2">{{ $player->first_name }} {{ $player->last_name }}</h2>
                     <p class="text-gray-700 font-semibold">Age: {{ $player->age }}</p>
