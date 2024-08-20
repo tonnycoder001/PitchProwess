@@ -2,7 +2,8 @@
 <footer class="bg-gray-800 py-6 mt-auto pt-12">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div class="flex space-x-6">
-            <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-gray-400">
+            <a href="https://www.instagram.com/pneumatika_fc/?hl=en" target="_blank"
+                class="text-white hover:text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="h-6 w-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -16,7 +17,8 @@
                         d="M18 2.25h-12A3.75 3.75 0 0 0 2.25 6v12A3.75 3.75 0 0 0 6 21.75h6.75v-6h-1.5v-2.25h1.5v-1.25c0-1.96 1.22-3.25 3-3.25a15.16 15.16 0 0 1 1.5.07v1.68h-1c-1 0-1.25.5-1.25 1.25v1.5h2.5l-.5 2.25h-2v6H18A3.75 3.75 0 0 0 21.75 18V6A3.75 3.75 0 0 0 18 2.25Z" />
                 </svg>
             </a>
-            <a href="https://www.whatsapp.com" target="_blank" class="text-white hover:text-gray-400">
+            <a href="https://whatsapp.com/channel/0029VaPpgvs1XquRV5X1ae1t" target="_blank"
+                class="text-white hover:text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="h-6 w-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
