@@ -3,7 +3,10 @@
 
 <div class="flex flex-col min-h-screen">
     <div class="container mx-auto py-8 flex-1">
-        <h1 class="text-5xl font-bold text-center uppercase">{{ $news->title }}</h1>
+        <div>
+            <img src="{{ $news->image }}" alt="{{ $news->title }}" class="w-full h-100 object-cover">
+            <h1 class="text-3xl font-bold text-center uppercase mt-6">{{ $news->title }}</h1>
+        </div>
         <div class="max-w-3xl mx-auto px-4 pt-4">
             <p class="text-gray-700 mt-4">{{ $news->body }}</p>
         </div>
