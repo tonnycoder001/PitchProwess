@@ -13,26 +13,25 @@
 
                 <main>
                     <section class="mb-4 mt-6">
-                        <h2 class="text-4xl font-bold text-black mb-4 flex justify-center ">Your Support
+                        <h2 class="text-4xl font-bold text-black mb-4 flex justify-center">Your
+                            Support
                             Makes a Difference</h2>
-                        <p class="text-gray-700 text-lg flex sm:justify-left">Your generous donation will help us
+                        <p class="text-gray-700 text-lg flex text-center">Your generous donation will help us
                             continue our mission to nuture young lives. Every contribution, big or small, gets us closer
                             to achieving our goals.</p>
                     </section>
 
 
-                    <section class="mb-4 rounded-lg bg-white shadow-md p-4 text-center">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Donation Options</h3>
-                        <p class="text-gray-700 mb-4">We appreciate your support! You can donate through the following
+                    <section class="mb-2 rounded-lg bg-white shadow-md p-4 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 ">Donation Options</h3>
+                        <p class="text-gray-700 mb-2">We appreciate your support! You can donate through the following
                             methods:</p>
                         <ul class="list-disc pl-4">
-                            <button class="rounded-lg bg-gray-500 sm:w-full md:w-1/2 lg:w-1/3 p-2 text-white">
-                                Donate using Paypal
-                            </button>
-                            <div class="pt-2">
-                                <button class="rounded-lg bg-gray-500 sm:w-full md:w-1/2 lg:w-1/3 p-2 text-white">
-                                    Donate using Mpesa
-                                </button>
+
+                            <div class="">
+                                <p>Donate using these number</p>
+                                <h1><span class="text-green-500">Mpesa</span> ********** </h1>
+                                <h1><span class="text-red-500">Airtel</span> **********</h1>
                             </div>
                         </ul>
                     </section>
