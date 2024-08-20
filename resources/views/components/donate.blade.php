@@ -19,9 +19,7 @@
                             continue our mission to nuture young lives. Every contribution, big or small, gets us closer
                             to achieving our goals.</p>
                     </section>
-                    <div class="flex justify-center item-center pt-6">
-                        <img src="images/download.jpeg" alt="" class="sm:w-full md:w-1/2 lg:w-1/3">
-                    </div>
+
 
                     <section class="mb-4 rounded-lg bg-white shadow-md p-4 text-center">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Donation Options</h3>
@@ -46,4 +44,5 @@
                             by sharing this
                             donation page with your friends and family.</p>
             </div>
-    </section @include('layouts.footer')
+    </section>
+    @include('layouts.footer')
