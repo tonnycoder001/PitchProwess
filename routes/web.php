@@ -1,12 +1,9 @@
 <?php
 
-use App\Models\Fixture;
-use App\Models\Matches;
+
 use App\Http\Controllers\AllPlayers;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\PlayerController;
-use App\Http\Controllers\ResultController;
 use App\Http\Controllers\FixtureController;
 use App\Http\Controllers\ComponentController;
 use App\Http\Controllers\Auth\LoginController;
@@ -23,7 +20,6 @@ Route::get('/news',  [NewsController::class, 'index']);
 Route::get('/news/show/{id}', [NewsController::class, 'show'])->name('article.show');
 
 
-Route::get('/players', [PlayerController::class, 'index']);
 
 Route::get('/register', [RegisterController::class, 'register']);
 Route::post('/register', [RegisterController::class, 'store']);
@@ -33,7 +29,6 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 
-Route::get('/results', [ResultController::class, 'index']);
 Route::get('/fixtures.men', [FixtureController::class, 'men']);
 Route::get('/fixtures.women', [FixtureController::class, 'women']);
 Route::get('/fixtures.academy', [FixtureController::class, 'academy']);
@@ -58,7 +53,6 @@ Route::get('/fixtures/academy_league', [FixtureController::class, 'academy_leagu
 Route::get('/fixtures/academy_tournament', [FixtureController::class, 'academy_tournament'])->name('fixtures.academy_tournament');
 Route::get('/fixtures/academy_friendly', [FixtureController::class, 'academy_friendly'])->name('fixtures.academy_friendly');
 
-Route::get('/components/about_us', [ComponentController::class, 'about_us'])->name('components.about_us');
+Route::get('/components/about_us', [ComponentController::class, 'about_us']);
 Route::get('/components/donate', [ComponentController::class, 'donate']);
-Route::get('/components/terms_of_use', [ComponentController::class, 'terms_of_use']);
 Route::get('/components/contact_us', [ComponentController::class, 'contact_us']);

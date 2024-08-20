@@ -50,7 +50,7 @@
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div class="flex flex-wrap justify-center md:justify-start space-x-4 text-sm mb-2 md:mb-0">
             <a href="/components/about_us" class="hover:text-gray-400">About Us</a>
-            <a href="/contacts" class="hover:text-gray-400">Contact Us</a>
+            <a href="/components/contact_us" class="hover:text-gray-400">Contact Us</a>
             <a href="/components/donate" class="hover:text-gray-400">Donate</a>
 
         </div>
