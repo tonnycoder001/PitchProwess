@@ -5,6 +5,7 @@ use App\Http\Controllers\AllPlayers;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FixtureController;
+use App\Http\Controllers\StandingController;
 use App\Http\Controllers\ComponentController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -56,3 +57,5 @@ Route::get('/fixtures/academy_friendly', [FixtureController::class, 'academy_fri
 Route::get('/components/about_us', [ComponentController::class, 'about_us']);
 Route::get('/components/donate', [ComponentController::class, 'donate']);
 Route::get('/components/contact_us', [ComponentController::class, 'contact_us']);
+
+Route::get('/standings', [StandingController::class, 'index']);
