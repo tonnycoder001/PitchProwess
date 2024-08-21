@@ -49,6 +49,53 @@
                 </div>
             </div>
         </div>
+
+
+
+
+        <div class="space-y-8 mt-8">
+            <h2 class="text-2xl font-bold mb-6">EMAILS</h2>
+            <div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl">📩</span>
+                    <div>
+                        <p class="text-lg font-semibold">Head Coach</p>
+                        <p class="text-2xl font-bold">*************</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl">📩</span>
+                    <div>
+                        <p class="text-lg font-semibold">Assistant Coach</p>
+                        <p class="text-2xl font-bold">*************</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl">📩</span>
+                    <div>
+                        <p class="text-lg font-semibold">Academy inquiries</p>
+                        <p class="text-2xl font-bold">*************</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl">📩</span>
+                    <div>
+                        <p class="text-lg font-semibold">Academy Pricing</p>
+                        <p class="text-2xl font-bold">*************</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     @include('layouts.footer')
