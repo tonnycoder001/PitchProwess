@@ -49,15 +49,6 @@
                     @endforeach
                 </div>
             </div>
-            <div class="hidden md:block md:w-1/2 lg:w-1/3 pl-12">
-                <div class="p-6 bg-black text-white rounded-lg shadow-lg">
-                    <h2 class="text-xl font-bold mb-2">Add Fixtures to Calendar</h2>
-                    <p class="mb-4">You can now add fixtures to your calendar so you never miss any of our matches.
-                    </p>
-                    <button class="bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700" id="addToCalendar">ADD
-                        TO CALENDAR</button>
-                </div>
-            </div>
         </div>
     </div>
 
