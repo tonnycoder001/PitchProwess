@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Models\User;
 use App\Models\Fixture;
 use App\Models\Player;
+use App\Models\Standing;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 
@@ -34,5 +35,6 @@ class DatabaseSeeder extends Seeder
         Fixture::factory()->count(15)->create();
         News::factory()->count(15)->create();
         Player::factory()->count(15)->create();
+        Standing::factory()->count(20)->create();
     }
 }
