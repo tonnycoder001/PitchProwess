@@ -27,6 +27,7 @@
         </div>
     </nav>
 
+
     <div class="container mx-auto px-4 pb-12 flex-grow">
         <h1 class="text-2xl font-bold text-center my-6">{{ ucfirst($team) }} Friendly Fixtures</h1>
         <div class="flex item-center justify-center">

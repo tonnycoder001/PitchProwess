@@ -18,11 +18,11 @@
             <div class="container mx-auto flex justify-center items-center">
                 <ul class="flex space-x-4">
                     <a href="{{ route('fixtures.women_league', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Women's
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex"
+                        role="menuitem">Women's
                         League</a>
                     <a href="{{ route('fixtures.women_tournament', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex"
-                        role="menuitem">women's
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 " role="menuitem">women's
                         Tournament</a>
                     <a href="{{ route('fixtures.women_friendly', ['team' => 'women']) }}"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">women's

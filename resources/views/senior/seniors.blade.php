@@ -2,17 +2,17 @@
 <div class="border-t border-gray-500 my-2"></div>
 
 <div class="flex-1 flex justify-center">
-    <div class=" md:flex space-x-8">
+    <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
         <div class="relative group">
             <a href="/seniors" class="hover:underline text-black hidden md:flex">Men</a>
         </div>
         <a href="/women" class="hover:underline text-black">Women</a>
         <div class="relative group">
-            <a href="/academyplayers" class="hover:underline text-black"> Academy</a>
-
+            <a href="/academyplayers" class="hover:underline text-black">Academy</a>
         </div>
     </div>
 </div>
+
 <div class="container mx-auto px-4 mb-12 mt-6">
     <div class="flex justify-center mb-2 mr-6">
         <form action="{{ route('players.search') }}" method="GET" class="w-full max-w-sm">

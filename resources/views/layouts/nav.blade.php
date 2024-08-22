@@ -7,45 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pneumatika Fc</title>
     @vite('resources/css/app.css')
-
 </head>
 
 <body>
 
-    <nav class="py-4 bg-red">
+    <nav class="py-4 ">
         <div class="container mx-auto flex items-center justify-between">
             <div class="flex items-center">
-                <span class="text-3xl font-bold text-orange-800 hidden sm:block"><a href="/">PNEUMATIKA</a><span
+                <span class="text-3xl font-bold text-orange-800"><a href="/">PNEUMATIKA</a><span
                         class="text-xl">™</span></span>
             </div>
-            <div class="flex-1 flex justify-center">
+            <div class="flex items-center space-x-4 md:hidden">
+                <!-- Hamburger Menu Icon -->
+                <button id="menu-toggle" class="text-orange-800 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 5.25h16.5m-16.5 7.5h16.5m-16.5 7.5h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 flex justify-center hidden md:flex">
                 <div class="md:flex space-x-8">
                     <a href="/" class="hover:underline text-orange-800">Home</a>
-                    <a href="/news" class="hover:underline text-orange-800 hidden md:flex">Latest</a>
+                    <a href="/news" class="hover:underline text-orange-800">News</a>
                     <div class="relative group">
-                        <a href="#" class="hover:underline text-orange-800 hidden md:flex">Fixtures</a>
+                        <a href="#" class="hover:underline text-orange-800">Fixtures</a>
                         <div
-                            class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
+                            class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
                             <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
                             <a href="/fixtures.women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
                             <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                         </div>
                     </div>
                     <div class="relative group">
-                        <a href="#" class="hover:underline text-orange-800 hidden md:flex">Players</a>
+                        <a href="#" class="hover:underline text-orange-800">Players</a>
                         <div
-                            class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
+                            class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
                             <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
                             <a href="/women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
                             <a href="/academyplayers" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
                         </div>
-
                     </div>
-                    <a href="/components/donate" class="hover:underline text-orange-800  hidden md:flex">Donate</a>
-
+                    <a href="/standings" class="hover:underline text-orange-800">Table</a>
+                    <a href="/components/donate" class="hover:underline text-orange-800">Donate</a>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="hidden md:flex items-center">
                 @guest
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-6 w-6 mr-2">
@@ -57,7 +65,7 @@
                     </div>
                 @endguest
                 @auth
-                    <div class="flex items-center space-x-4 ml-auto">
+                    <div class="flex items-center space-x-4 ml-auto ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -66,7 +74,6 @@
                         <div>
                             <p class="text-black mr-6 uppercase">{{ auth()->user()->name }}</p>
                         </div>
-
                     </div>
                     <form action="{{ route('logout') }}" method="post" class="inline pt-2">
                         @csrf
@@ -76,7 +83,49 @@
                 @endauth
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col items-center mt-4 space-y-2">
+            <div class="relative group">
+                <a href="/" class="text-orange-800 hover:underline">Home</a>
+            </div>
+            <div class="relative group">
+                <a href="/news" class="text-orange-800 hover:underline">News</a>
+            </div>
+            <div class="relative group">
+                <a href="#" class="text-orange-800 hover:underline">Fixtures</a>
+                <div class="mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
+                    <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
+                    <a href="/fixtures.women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
+                    <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="#" class="text-orange-800 hover:underline">Players</a>
+                <div class="mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
+                    <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
+                    <a href="/women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
+                    <a href="/academyplayers" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="/standings" class="text-orange-800 hover:underline">Table</a>
+            </div>
+            <div class="relative group">
+                <a href="/components/donate" class="text-orange-800 hover:underline">Donate</a>
+            </div>
+        </div>
     </nav>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
 
 </body>
 

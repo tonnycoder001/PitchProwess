@@ -2,14 +2,15 @@
 @include('layouts.nav')
 <div class="border-t border-gray-500 my-2"></div>
 <div class="flex-1 flex justify-center">
-    <div class=" md:flex space-x-8">
-        <div class="relative group">
-            <a href="/seniors" class="hover:underline text-black ">Men</a>
-        </div>
-        <a href="/women" class="hover:underline text-black">Women</a>
-        <div class="relative group">
-            <a href="/academyplayers" class="hover:underline text-black hidden md:flex"> Academy</a>
-
+    <div class="flex-1 flex justify-center">
+        <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+            <div class="relative group">
+                <a href="/seniors" class="hover:underline text-black">Men</a>
+            </div>
+            <a href="/women" class="hover:underline text-black">Women</a>
+            <div class="relative group">
+                <a href="/academyplayers" class="hover:underline text-black  hidden md:flex">Academy</a>
+            </div>
         </div>
     </div>
 </div>

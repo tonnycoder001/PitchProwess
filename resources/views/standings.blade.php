@@ -5,7 +5,7 @@
     <h1 class="text-2xl font-bold mb-6">League Standings</h1>
 
     <div class="overflow-x-auto">
-        <table class="min-w-full bg-white">
+        <table class="min-w-1/2 bg-white">
             <thead class="bg-gray-800 text-white">
                 <tr>
                     <th scope="col" class="w-1/8 px-2 py-3 text-xs font-medium text-left tracking-wider">NO.</th>

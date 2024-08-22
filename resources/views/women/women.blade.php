@@ -5,14 +5,13 @@
 <div class="border-t border-gray-500 my-2"></div>
 
 <div class="flex-1 flex justify-center">
-    <div class=" md:flex space-x-8">
+    <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
         <div class="relative group">
-            <a href="/seniors" class="hover:underline text-black ">Men</a>
+            <a href="/seniors" class="hover:underline text-black">Men</a>
         </div>
-        <a href="/women" class="hover:underline text-black hidden md:flex">Women</a>
+        <a href="/women" class="hover:underline text-black  hidden md:flex">Women</a>
         <div class="relative group">
-            <a href="/academyplayers" class="hover:underline text-black "> Academy</a>
-
+            <a href="/academyplayers" class="hover:underline text-black">Academy</a>
         </div>
     </div>
 </div>
