@@ -14,9 +14,9 @@ return new class() extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('body');
+            $table->longText('body');
             $table->string('author');
-            $table->dateTime('published_at'); // Corrected column name
+            $table->dateTime('published_at');
             $table->string('image')->nullable();
             $table->timestamps();
         });
