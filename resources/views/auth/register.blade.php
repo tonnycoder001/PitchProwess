@@ -1,3 +1,4 @@
+@vite('resources/css/app.css')
 <div class="bg-gray-50 border border-gray-200 p-10 rounded max-w-md mx-auto mt-24">
     <form action="" method="post" class="space-y-4">
         @csrf
