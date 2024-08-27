@@ -35,31 +35,41 @@
                         </button>
                     </div>
                     <div class="flex-1 flex justify-center hidden md:flex">
-                        <div class="md:flex space-x-8">
-                            <a href="/" class="hover:underline text-orange-800">Home</a>
-                            <a href="/news" class="hover:underline text-orange-800">News</a>
-                            <div class="relative group">
-                                <a href="#" class="hover:underline text-orange-800">Fixtures</a>
-                                <div
-                                    class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
-                                    <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
-                                    <a href="/fixtures.women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
-                                    <a href="/fixtures.academy" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
+                        <div class="flex-1 flex justify-center hidden md:flex">
+                            <div class="md:flex space-x-8">
+                                <a href="/" class="hover:underline text-orange-800">Home</a>
+                                <a href="/news" class="hover:underline text-orange-800">News</a>
+
+                                <!-- Fixtures Dropdown -->
+                                <div class="relative group">
+                                    <a href="#" class="hover:underline text-orange-800">Fixtures</a>
+                                    <div
+                                        class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block group-focus-within:block">
+                                        <a href="/fixtures.men" class="block px-4 py-2 hover:bg-gray-100">Men</a>
+                                        <a href="/fixtures.women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
+                                        <a href="/fixtures.academy"
+                                            class="block px-4 py-2 hover:bg-gray-100">Academy</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="relative group">
-                                <a href="#" class="hover:underline text-orange-800">Players</a>
-                                <div
-                                    class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
-                                    <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
-                                    <a href="/women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
-                                    <a href="/academyplayers" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
+
+                                <!-- Players Dropdown -->
+                                <div class="relative group">
+                                    <a href="#" class="hover:underline text-orange-800">Players</a>
+                                    <div
+                                        class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block group-focus-within:block">
+                                        <a href="/seniors" class="block px-4 py-2 hover:bg-gray-100">Men</a>
+                                        <a href="/women" class="block px-4 py-2 hover:bg-gray-100">Women</a>
+                                        <a href="/academyplayers" class="block px-4 py-2 hover:bg-gray-100">Academy</a>
+                                    </div>
                                 </div>
+
+                                <a href="/standings" class="hover:underline text-orange-800">Table</a>
+                                <a href="/components/donate" class="hover:underline text-orange-800">Donate</a>
                             </div>
-                            <a href="/standings" class="hover:underline text-orange-800">Table</a>
-                            <a href="/components/donate" class="hover:underline text-orange-800">Donate</a>
                         </div>
+
                     </div>
+
                     <div class="hidden md:flex items-center">
                         @guest
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -172,7 +182,7 @@
                     }
 
                     .slide-infinite {
-                        animation: slide 5s linear infinite;
+                        animation: slide 20s linear infinite;
                     }
                 </style>
                 </head>
