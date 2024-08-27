@@ -29,7 +29,7 @@ class NewsResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('body')
+                Forms\Components\RichEditor::make('body')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('author')
@@ -49,6 +49,7 @@ class NewsResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('author')
                     ->searchable(),
@@ -57,6 +58,7 @@ class NewsResource extends Resource
                     ->sortable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('body')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
