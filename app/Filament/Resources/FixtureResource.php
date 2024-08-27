@@ -29,8 +29,23 @@ class FixtureResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required(),
-                TextInput::make('home_team')->required(),
-                TextInput::make('away_team')->required(),
+                Select::make('home_team_id')
+                    ->options([
+                        'pneumatika men' => 'Pneumatika Men',
+                        'pneumatika women' => 'Pneumatika Women',
+                        'pneumatika academy' => 'Pneumatika Academy',
+
+                    ])
+                    ->label('Home Team')
+                    ->required(),
+                Select::make('away_team_id')
+                    ->options([
+                        'pneumatika men' => 'Pneumatika Men',
+                        'pneumatika women' => 'Pneumatika Women',
+                        'pneumatika academy' => 'Pneumatika Academy',
+                    ])
+                    ->label('Away Team')
+                    ->required(),
                 TextInput::make('location')->required(),
                 DateTimePicker::make('date')->required(),
                 DateTimePicker::make('time')->required(),
