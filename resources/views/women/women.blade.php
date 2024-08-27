@@ -1,9 +1,5 @@
 @include('layouts.nav')
-
-
-
 <div class="border-t border-gray-500 my-2"></div>
-
 <div class="flex-1 flex justify-center">
     <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
         <div class="relative group">

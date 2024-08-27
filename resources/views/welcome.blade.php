@@ -7,9 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pneumatika Fc</title>
     @vite('resources/css/app.css')
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-
-
     <style>
         .background-darken {
             filter: brightness(80%);

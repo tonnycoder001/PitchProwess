@@ -16,6 +16,10 @@ class NewsController extends Controller
     }
     public function show($id)
     {
+        // if (auth()->guest()) {
+        //     return redirect()->route('auth.register');
+        // }
+
         $news = News::findOrFail($id);
         return view('news.show', compact('news'));
     }

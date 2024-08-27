@@ -1,9 +1,6 @@
-@vite('resources/css/app.css')
 @include('layouts.nav')
-
 <div class="border-t border-gray-800 my-6"></div>
 <div class="mx-auto py-8 pb-12 p-6">
-
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         @foreach ($news as $article)
             <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
