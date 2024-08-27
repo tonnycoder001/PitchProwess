@@ -18,8 +18,7 @@
                     <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                         <img src="{{ $player->image }}" alt="{{ $player->name }}" class="w-full h-96 object-cover">
                         <div class="p-4">
-                            <h2 class="text-xl font-semibold mb-2">{{ $player->first_name }}</h2>
-                            <h2 class="text-xl font-semibold mb-2">{{ $player->last_name }}</h2>
+                            <h2 class="text-xl font-semibold mb-2">{{ $player->full_name }}</h2>
                             <p class="text-gray-700 font-semibold">Age: {{ $player->age }}</p>
                             <p class="text-gray-700 font-semibold">Nationality: {{ $player->nationality }}</p>
                             <p class="text-gray-700 font-semibold">Position: {{ $player->position }}</p>
