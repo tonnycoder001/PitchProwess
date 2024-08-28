@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('fixtures', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('home_team_id')->nullable();
+            $table->unsignedBigInteger('away_team_id')->nullable();
             $table->string('name');
             $table->string('home_team');
             $table->string('away_team');
             $table->string('location');
             $table->date('date');
             $table->time('time');
-            $table->string('type');
+            $table->enum('type', ['league', 'tournament', 'friendly']);
             $table->integer('home_team_score')->nullable();
             $table->integer('away_team_score')->nullable();
             $table->string('results')->nullable();
