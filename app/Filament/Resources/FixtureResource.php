@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use Filament\Forms;
+use App\Models\Team;
 use Filament\Tables;
 use App\Models\Fixture;
 use Filament\Forms\Form;
@@ -29,22 +30,14 @@ class FixtureResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required(),
-                Select::make('home_team')
-                    ->options([
-                        'pneumatika men' => 'Pneumatika Men',
-                        'pneumatika women' => 'Pneumatika Women',
-                        'pneumatika academy' => 'Pneumatika Academy',
-
-                    ])
+                Select::make('home_team_id')
                     ->label('Home Team')
+                    ->options(Team::pluck('name', 'id'))
                     ->required(),
-                Select::make('away_team')
-                    ->options([
-                        'pneumatika men' => 'Pneumatika Men',
-                        'pneumatika women' => 'Pneumatika Women',
-                        'pneumatika academy' => 'Pneumatika Academy',
-                    ])
+
+                Select::make('away_team_id')
                     ->label('Away Team')
+                    ->options(Team::pluck('name', 'id'))
                     ->required(),
                 TextInput::make('location')->required(),
                 DateTimePicker::make('date')->required(),
