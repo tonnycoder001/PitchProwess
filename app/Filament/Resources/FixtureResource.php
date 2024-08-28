@@ -29,7 +29,7 @@ class FixtureResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required(),
-                Select::make('home_team_id')
+                Select::make('home_team')
                     ->options([
                         'pneumatika men' => 'Pneumatika Men',
                         'pneumatika women' => 'Pneumatika Women',
@@ -38,7 +38,7 @@ class FixtureResource extends Resource
                     ])
                     ->label('Home Team')
                     ->required(),
-                Select::make('away_team_id')
+                Select::make('away_team')
                     ->options([
                         'pneumatika men' => 'Pneumatika Men',
                         'pneumatika women' => 'Pneumatika Women',
@@ -64,6 +64,14 @@ class FixtureResource extends Resource
                     ])
                     ->required(),
                 TextInput::make('results'),
+                TextInput::make('home_team_score')
+                    ->label('Home Team Score')
+                    ->required()
+                    ->numeric(),
+                TextInput::make('away_team_score')
+                    ->label('Away Team Score')
+                    ->required()
+                    ->numeric(),
             ]);
     }
 
