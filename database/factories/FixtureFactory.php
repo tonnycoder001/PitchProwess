@@ -26,10 +26,8 @@ class FixtureFactory extends Factory
             'date' => $this->faker->date,
             'time' => $this->faker->time,
             'type' => $this->faker->randomElement(['league', 'tournament', 'friendly']),
-            'team' => $this->faker->name,
             'home_team_score' => $this->faker->numberBetween(0, 10),
             'away_team_score' => $this->faker->numberBetween(0, 10),
-            'team' => $this->faker->randomElement(['men', 'women', 'academy']),
         ];
     }
 }
