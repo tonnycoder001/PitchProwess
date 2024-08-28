@@ -10,13 +10,11 @@ class Standing extends Model
     use HasFactory;
 
     protected $fillable = [
-        'position',
-        'club_name',
-        'played',
-        'won',
-        'drawn',
-        'lost',
-        'goal_difference',
-        'points',
+        'team_name',
+        'games_played',
+        'wins',
+        'draws',
+        'losses',
+        'points'
     ];
 }
