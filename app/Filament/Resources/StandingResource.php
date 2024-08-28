@@ -4,10 +4,13 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Fixture;
 use App\Models\Standing;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
@@ -27,37 +30,30 @@ class StandingResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('position')
-                    ->required()
+                Select::make('team_name')
+                    ->options(function () {
+                        $homeTeams = Fixture::pluck('home_team')->toArray();
+                        $awayTeams = Fixture::pluck('away_team')->toArray();
+                        $teams = array_unique(array_merge($homeTeams, $awayTeams));
+
+                        return array_combine($teams, $teams);
+                    })
+                    ->searchable()
+                    ->label('Team')
+                    ->required(),
+                TextInput::make('games_played')
                     ->numeric()
-                    ->label('Position'),
-                TextInput::make('club_name')
-                    ->required()
-                    ->label('Club Name'),
-                TextInput::make('played')
-                    ->required()
+                    ->required(),
+                TextInput::make('wins')
                     ->numeric()
-                    ->label('Played'),
-                TextInput::make('won')
-                    ->required()
+                    ->required(),
+                TextInput::make('draws')
                     ->numeric()
-                    ->label('Won'),
-                TextInput::make('drawn')
-                    ->required()
+                    ->required(),
+                TextInput::make('losses')
                     ->numeric()
-                    ->label('Drawn'),
-                TextInput::make('lost')
-                    ->required()
-                    ->numeric()
-                    ->label('Lost'),
-                TextInput::make('goal_difference')
-                    ->required()
-                    ->numeric()
-                    ->label('Goal Difference'),
-                TextInput::make('points')
-                    ->required()
-                    ->numeric()
-                    ->label('Points'),
+                    ->required(),
+
             ]);
     }
 
@@ -65,14 +61,13 @@ class StandingResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('position')->label('position'),
-                TextColumn::make('club_name')->label('Club Name'),
-                TextColumn::make('played')->label('Played'),
-                TextColumn::make('won')->label('Won'),
-                TextColumn::make('drawn')->label('Drawn'),
-                TextColumn::make('lost')->label('Lost'),
-                TextColumn::make('goal_difference')->label('Goal Difference'),
-                TextColumn::make('points')->label('Points'),
+                Tables\Columns\TextColumn::make('team_name')->label('Team'),
+                Tables\Columns\TextColumn::make('games_played')->label('Games Played'),
+                Tables\Columns\TextColumn::make('wins')->label('Wins'),
+                Tables\Columns\TextColumn::make('draws')->label('Draws'),
+                Tables\Columns\TextColumn::make('losses')->label('Losses'),
+                Tables\Columns\TextColumn::make('points')->label('Points'),
+                Tables\Columns\TextColumn::make('goal_difference')->label('goal_difference'),
             ])
             ->filters([
                 //
