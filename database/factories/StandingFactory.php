@@ -19,14 +19,14 @@ class StandingFactory extends Factory
     public function definition(): array
     {
         return [
-            'position' => $this->faker->numberBetween(1, 20),
-            'club_name' => $this->faker->company,
-            'played' => $this->faker->numberBetween(1, 38),
-            'won' => $this->faker->numberBetween(1, 38),
-            'drawn' => $this->faker->numberBetween(1, 38),
-            'lost' => $this->faker->numberBetween(1, 38),
-            'goal_difference' => $this->faker->numberBetween(-100, 100),
-            'points' => $this->faker->numberBetween(0, 100)
+            'team_name' => $this->faker->name,
+            'games_played' => $this->faker->numberBetween(0, 20),
+            'wins' => $this->faker->numberBetween(0, 20),
+            'draws' => $this->faker->numberBetween(0, 20),
+            'losses' => $this->faker->numberBetween(0, 20),
+            'points' => $this->faker->numberBetween(0, 150),
+            'goal_difference' => $this->faker->numberBetween(0, 50),
+
         ];
     }
 }
