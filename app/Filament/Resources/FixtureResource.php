@@ -6,6 +6,7 @@ use Filament\Forms;
 use App\Models\Team;
 use Filament\Tables;
 use App\Models\Fixture;
+use App\Enums\MatchType;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -43,11 +44,7 @@ class FixtureResource extends Resource
                 DateTimePicker::make('date')->required(),
                 DateTimePicker::make('time')->required(),
                 Select::make('type')
-                    ->options([
-                        'league' => 'League',
-                        'tournament' => 'Tournament',
-                        'friendly' => 'Friendly',
-                    ])
+                    ->options(MatchType::labels())
                     ->required(),
                 Select::make('team')
                     ->options([
