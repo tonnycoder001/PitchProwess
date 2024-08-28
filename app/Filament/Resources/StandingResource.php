@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use Filament\Forms;
+use App\Models\Team;
 use Filament\Tables;
 use App\Models\Fixture;
 use App\Models\Standing;
@@ -30,16 +31,10 @@ class StandingResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('team_name')
-                    ->options(function () {
-                        $homeTeams = Fixture::pluck('home_team')->toArray();
-                        $awayTeams = Fixture::pluck('away_team')->toArray();
-                        $teams = array_unique(array_merge($homeTeams, $awayTeams));
-
-                        return array_combine($teams, $teams);
-                    })
-                    ->searchable()
+                Select::make('team_id')
                     ->label('Team')
+                    ->options(Team::pluck('name', 'id'))
+                    ->searchable()
                     ->required(),
                 TextInput::make('games_played')
                     ->numeric()

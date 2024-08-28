@@ -19,13 +19,13 @@ class StandingFactory extends Factory
     public function definition(): array
     {
         return [
-            'team_name' => $this->faker->name,
+            'team_id' => $this->faker->numberBetween(1, 20),
             'games_played' => $this->faker->numberBetween(0, 20),
             'wins' => $this->faker->numberBetween(0, 20),
             'draws' => $this->faker->numberBetween(0, 20),
             'losses' => $this->faker->numberBetween(0, 20),
             'points' => $this->faker->numberBetween(0, 150),
-            'goal_difference' => $this->faker->numberBetween(0, 50),
+
 
         ];
     }
