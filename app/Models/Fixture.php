@@ -17,7 +17,6 @@ class Fixture extends Model
         'date',
         'time',
         'type',
-        'team',
         'results',
     ];
 }
