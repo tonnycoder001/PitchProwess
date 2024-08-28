@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('standings', function (Blueprint $table) {
             $table->id();
-            $table->integer('position');
-            $table->string('club_name');
-            $table->integer('played')->default(0);
-            $table->integer('won')->default(0);
-            $table->integer('drawn')->default(0);
-            $table->integer('lost')->default(0);
+            $table->string('team_name');
+            $table->integer('games_played')->default(0);
+            $table->integer('wins')->default(0);
+            $table->integer('draws')->default(0);
+            $table->integer('losses')->default(0);
             $table->integer('goal_difference')->default(0);
             $table->integer('points')->default(0);
             $table->timestamps();
