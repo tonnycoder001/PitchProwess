@@ -14,13 +14,18 @@ class Team extends Model
         'name',
         'slug'
     ];
-    public function homeMatches()
+    public function homeFixtures()
     {
         return $this->hasMany(Fixture::class, 'home_team_id');
     }
 
-    public function awayMatches()
+    public function awayFixtures()
     {
         return $this->hasMany(Fixture::class, 'away_team_id');
+    }
+
+    public function standing()
+    {
+        return $this->hasOne(Standing::class);
     }
 }
