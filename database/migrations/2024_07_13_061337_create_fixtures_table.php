@@ -16,8 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('home_team_id')->nullable();
             $table->unsignedBigInteger('away_team_id')->nullable();
             $table->string('name');
-            $table->string('home_team');
-            $table->string('away_team');
             $table->string('location');
             $table->date('date');
             $table->time('time');
