@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Team;
 use App\Enums\MatchType;
+use App\Models\Standing;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
