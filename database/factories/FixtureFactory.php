@@ -20,8 +20,6 @@ class FixtureFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'home_team' => $this->faker->name,
-            'away_team' => $this->faker->name,
             'location' => $this->faker->address,
             'date' => $this->faker->date,
             'time' => $this->faker->time,
