@@ -56,13 +56,13 @@ class StandingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('team_name')->label('Team'),
+                Tables\Columns\TextColumn::make('team.name')->label('Team'),
                 Tables\Columns\TextColumn::make('games_played')->label('Games Played'),
                 Tables\Columns\TextColumn::make('wins')->label('Wins'),
                 Tables\Columns\TextColumn::make('draws')->label('Draws'),
                 Tables\Columns\TextColumn::make('losses')->label('Losses'),
                 Tables\Columns\TextColumn::make('points')->label('Points'),
-                Tables\Columns\TextColumn::make('goal_difference')->label('goal_difference'),
+                Tables\Columns\TextColumn::make('goal_difference')->label('Goal Difference'),
             ])
             ->filters([
                 //
