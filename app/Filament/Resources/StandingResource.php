@@ -49,6 +49,7 @@ class StandingResource extends Resource
                     ->numeric()
                     ->required(),
 
+
             ]);
     }
 
