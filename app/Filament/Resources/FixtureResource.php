@@ -53,7 +53,6 @@ class FixtureResource extends Resource
                         'academy' => 'academy',
                     ])
                     ->required(),
-                TextInput::make('results'),
                 TextInput::make('home_team_score')
                     ->label('Home Team Score')
                     ->required()
@@ -70,14 +69,13 @@ class FixtureResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('home_team')->sortable()->searchable(),
-                TextColumn::make('away_team')->sortable()->searchable(),
+                TextColumn::make('homeTeam.name')->label('Home Team')->sortable(),
+                TextColumn::make('awayTeam.name')->label('Away Team')->sortable(),
                 TextColumn::make('location')->sortable()->searchable(),
                 TextColumn::make('date')->sortable(),
                 TextColumn::make('time')->sortable(),
                 TextColumn::make('type')->sortable(),
                 TextColumn::make('team')->sortable(),
-                TextColumn::make('results'),
             ])
             ->filters([
                 //
