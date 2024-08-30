@@ -14,15 +14,6 @@ class Team extends Model
         'name',
         'slug'
     ];
-    public function homeFixtures()
-    {
-        return $this->hasMany(Fixture::class, 'home_team_id');
-    }
-
-    public function awayFixtures()
-    {
-        return $this->hasMany(Fixture::class, 'away_team_id');
-    }
 
     public function standing()
     {
