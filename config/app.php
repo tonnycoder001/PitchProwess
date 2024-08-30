@@ -151,7 +151,6 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
-        // Other service providers...
     ],
 
 

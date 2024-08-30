@@ -22,7 +22,6 @@ return new class extends Migration
             $table->enum('type', ['league', 'tournament', 'friendly']);
             $table->integer('home_team_score')->nullable();
             $table->integer('away_team_score')->nullable();
-            $table->string('results')->nullable();
             $table->timestamps();
         });
     }

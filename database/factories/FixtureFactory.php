@@ -19,6 +19,8 @@ class FixtureFactory extends Factory
     public function definition(): array
     {
         return [
+            'home_team_id' => $this->faker->numberBetween(1, 10),
+            'away_team_id' => $this->faker->numberBetween(1, 10),
             'name' => $this->faker->name,
             'location' => $this->faker->address,
             'date' => $this->faker->date,
