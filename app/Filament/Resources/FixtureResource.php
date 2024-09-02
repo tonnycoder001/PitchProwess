@@ -55,11 +55,9 @@ class FixtureResource extends Resource
                     ->required(),
                 TextInput::make('home_team_score')
                     ->label('Home Team Score')
-                    ->required()
                     ->numeric(),
                 TextInput::make('away_team_score')
                     ->label('Away Team Score')
-                    ->required()
                     ->numeric(),
             ]);
     }
