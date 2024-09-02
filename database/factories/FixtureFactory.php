@@ -24,6 +24,7 @@ class FixtureFactory extends Factory
             'name' => $this->faker->name,
             'location' => $this->faker->address,
             'date' => $this->faker->date,
+            'team' => $this->faker->randomElement(['men', 'women', 'academy']),
             'time' => $this->faker->time,
             'type' => $this->faker->randomElement(['league', 'tournament', 'friendly']),
             'home_team_score' => $this->faker->numberBetween(0, 10),
