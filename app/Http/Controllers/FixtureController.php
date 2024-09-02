@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fixture;
+use App\Enums\MatchType;
 use Illuminate\Http\Request;
 
 class FixtureController extends Controller
@@ -22,17 +23,25 @@ class FixtureController extends Controller
         return view('fixtures.academy');
     }
 
+
+
     public function league(Request $request)
     {
         $team = $request->input('team', 'men');
-        $fixtures = Fixture::where('type', 'league')->where('team', $team)->get();
+        $fixtures = Fixture::where('type', MatchType::LEAGUE->value)
+            ->where('team', $team)
+            ->get();
         return view('fixtures.men_league', compact('fixtures', 'team'));
     }
 
     public function tournament(Request $request)
     {
+
+
         $team = $request->input('team', 'men');
-        $fixtures = Fixture::where('type', 'tournament')->where('team', $team)->get();
+        $fixtures = Fixture::where('type', MatchType::TOURNAMENT->value)
+            ->where('team', $team)
+            ->get();
         return view('fixtures.men_tournament', compact('fixtures', 'team'));
     }
 
