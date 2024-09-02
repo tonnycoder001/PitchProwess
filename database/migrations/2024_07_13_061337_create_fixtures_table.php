@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('location');
             $table->date('date');
             $table->time('time');
+            $table->enum('team', ['men', 'women', 'academy']);
             $table->enum('type', ['league', 'tournament', 'friendly']);
             $table->integer('home_team_score')->nullable();
             $table->integer('away_team_score')->nullable();
