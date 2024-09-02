@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use App\Models\Team;
 use Filament\Tables;
+use App\Enums\TeamType;
 use App\Models\Fixture;
 use App\Enums\MatchType;
 use Filament\Forms\Form;
@@ -47,11 +48,7 @@ class FixtureResource extends Resource
                     ->options(MatchType::labels())
                     ->required(),
                 Select::make('team')
-                    ->options([
-                        'men' => 'men',
-                        'women' => 'women',
-                        'academy' => 'academy',
-                    ])
+                    ->options(TeamType::labels())
                     ->required(),
                 TextInput::make('home_team_score')
                     ->label('Home Team Score')
