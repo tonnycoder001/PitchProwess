@@ -18,6 +18,7 @@ class Fixture extends Model
         'location',
         'date',
         'time',
+        'team',
         'type',
         'results',
         'home_team_id',
