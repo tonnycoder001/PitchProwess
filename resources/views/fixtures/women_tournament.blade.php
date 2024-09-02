@@ -13,26 +13,25 @@
 
     <div class="border-t border-gray-300"></div>
 
-    <div class="flex-1 flex justify-center">
-        <nav class=" p-4">
-            <div class="container mx-auto flex justify-center items-center">
-                <ul class="flex space-x-4">
-                    <a href="{{ route('fixtures.women_league', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Women's
-                        League</a>
-                    <a href="{{ route('fixtures.women_tournament', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex"
-                        role="menuitem">women's
-                        Tournament</a>
-                    <a href="{{ route('fixtures.women_friendly', ['team' => 'women']) }}"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">women's
-                        Friendly</a>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <nav class=" p-4">
+        <div class=" mx-auto flex justify-center items-center">
+            <ul class="flex space-x-4">
+                <a href="{{ route('fixtures.women_league', ['team' => 'women']) }}"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Women's
+                    League</a>
+                <a href="{{ route('fixtures.women_tournament', ['team' => 'women']) }}"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hidden md:flex"
+                    role="menuitem">women's
+                    Tournament</a>
+                <a href="{{ route('fixtures.women_friendly', ['team' => 'women']) }}"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">women's
+                    Friendly</a>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="container mx-auto px-4 pb-12">
+
+    <div class="container mx-auto px-4 pb-12 flex-grow">
         <h1 class="text-2xl font-bold text-center my-6">{{ ucfirst($team) }} Tournament Fixtures</h1>
         <div class="flex item-center justify-center">
             <div class="w-full md:w-1/2 lg:w-1/2">
@@ -45,9 +44,9 @@
                                         class="text-red-500">Tournament</span></p>
                             </div>
                             <div class="flex justify-between items-center">
-                                <h5 class="text-base font-bold">{{ $fixture->home_team }}</h5>
+                                <h5 class="text-base font-bold">{{ $fixture->homeTeam->name }}</h5>
                                 <p class="text-gray-600 text-xs">{{ $fixture->time }}</p>
-                                <h5 class="text-base font-bold">{{ $fixture->away_team }}</h5>
+                                <h5 class="text-base font-bold">{{ $fixture->awayTeam->name }}</h5>
                             </div>
                             <p class="text-gray-600 text-xs mt-1">{{ $fixture->location }}</p>
                         </div>
