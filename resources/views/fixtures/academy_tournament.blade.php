@@ -42,17 +42,18 @@
                                         class="text-red-500">Tournament</span></p>
                             </div>
                             <div class="flex justify-between items-center">
-                                <h5 class="text-base font-bold">{{ $fixture->home_team }}</h5>
+                                <h5 class="text-base font-bold">{{ $fixture->homeTeam->name }}</h5>
                                 <p class="text-gray-600 text-xs">{{ $fixture->time }}</p>
-                                <h5 class="text-base font-bold">{{ $fixture->away_team }}</h5>
+                                <h5 class="text-base font-bold">{{ $fixture->awayTeam->name }}</h5>
                             </div>
                             <p class="text-gray-600 text-xs mt-1">{{ $fixture->location }}</p>
                         </div>
                     @endforeach
                 </div>
             </div>
-
         </div>
+    </div>
+    </div>
     </div>
 
     @include('layouts.footer')
