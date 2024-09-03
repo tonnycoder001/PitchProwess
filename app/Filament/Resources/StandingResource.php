@@ -57,6 +57,7 @@ class StandingResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('position')->label('position'),
                 Tables\Columns\TextColumn::make('team.name')->label('Team'),
                 Tables\Columns\TextColumn::make('games_played')->label('Games Played'),
                 Tables\Columns\TextColumn::make('wins')->label('Wins'),
