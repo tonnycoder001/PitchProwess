@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('fixtures', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('home_team_id')->nullable();
-            $table->unsignedBigInteger('away_team_id')->nullable();
+            $table->unsignedBigInteger('home_team_id')->constrained('teams')->onDelete('cascade');
+            $table->unsignedBigInteger('away_team_id')->constrained('teams')->onDelete('cascade');
             $table->string('name');
             $table->string('location');
             $table->date('date');

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('standings', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('position')->nullable();
-            $table->foreignId('team_id')->nullable();
+            $table->foreignId('team_id');
             $table->integer('games_played')->default(0);
             $table->integer('wins')->default(0);
             $table->integer('draws')->default(0);
