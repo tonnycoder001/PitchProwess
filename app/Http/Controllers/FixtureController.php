@@ -50,7 +50,7 @@ class FixtureController extends Controller
         $fixtures = Fixture::where('type', MatchType::FRIENDLY->value)
             ->where('team', $team)
             ->get();
-        return view('fixtures.men_tournament', compact('fixtures', 'team'));
+        return view('fixtures.men_friendly', compact('fixtures', 'team'));
     }
 
 
