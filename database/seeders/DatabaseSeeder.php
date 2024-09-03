@@ -36,7 +36,6 @@ class DatabaseSeeder extends Seeder
         Fixture::factory()->count(15)->create();
         News::factory()->count(15)->create();
         Player::factory()->count(15)->create();
-        Standing::factory()->count(20)->create();
         Team::factory()->count(20)->create();
     }
 }
