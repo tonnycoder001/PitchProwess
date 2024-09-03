@@ -20,12 +20,15 @@ class Standing extends Model
         'losses',
         'points',
         'goal_difference',
+        'position'
     ];
 
     public function team()
     {
         return $this->belongsTo(Team::class);
     }
+
+
     protected static function booted()
     {
         static::saving(function ($standing) {
