@@ -29,25 +29,32 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        @php
-                            $sortedStandings = $standings->sortBy('position');
-                        @endphp
-                        @foreach ($sortedStandings as $standing)
-                            <tr>
-                                <td class="border px-2 py-2 text-sm font-medium text-gray-900">{{ $standing->position }}
-                                </td>
-                                <td class="border px-2 py-2 text-sm font-medium text-gray-900">
-                                    {{ $standing->team->name }}</td>
-                                <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->games_played }}</td>
-                                <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->wins }}</td>
-                                <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->draws }}</td>
-                                <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->losses }}</td>
-                                <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->goal_difference }}</td>
-                                <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->points }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
+                    @if ($standings->isEmpty())
+                        <p class="text-center mt-6 font-bold text-2xl">No Standings available.</p>
+                    @else
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            @php
+                                $sortedStandings = $standings->sortBy('position');
+                            @endphp
+                            @foreach ($sortedStandings as $standing)
+                                <tr>
+                                    <td class="border px-2 py-2 text-sm font-medium text-gray-900">
+                                        {{ $standing->position }}
+                                    </td>
+                                    <td class="border px-2 py-2 text-sm font-medium text-gray-900">
+                                        {{ $standing->team->name }}</td>
+                                    <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->games_played }}
+                                    </td>
+                                    <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->wins }}</td>
+                                    <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->draws }}</td>
+                                    <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->losses }}</td>
+                                    <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->goal_difference }}
+                                    </td>
+                                    <td class="border px-2 py-2 text-sm text-gray-500">{{ $standing->points }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    @endif
                 </table>
             </div>
         </div>
