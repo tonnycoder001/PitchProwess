@@ -25,6 +25,7 @@ class StandingFactory extends Factory
             'draws' => $this->faker->numberBetween(0, 20),
             'losses' => $this->faker->numberBetween(0, 20),
             'points' => $this->faker->numberBetween(0, 150),
+            'position' => $this->faker->numberBetween(1, 20),
 
 
         ];
