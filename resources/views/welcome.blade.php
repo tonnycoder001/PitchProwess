@@ -65,7 +65,18 @@
 
                                 <a href="/standings" class="hover:underline text-orange-800">Table</a>
                                 <a href="/components/donate" class="hover:underline text-orange-800">Donate</a>
+                                <div class="relative group">
+                                    <a href="#" class="hover:underline text-orange-800">Others</a>
+                                    <div
+                                        class="absolute left-0 mt-2 w-48 bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block group-focus-within:block">
+                                        <a href="/components/about_us" class="block px-4 py-2 hover:bg-gray-100">About
+                                            Us</a>
+                                        <a href="/components/contact_us"
+                                            class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
@@ -132,6 +143,14 @@
                     </div>
                     <div class="w-full text-center">
                         <a href="/components/donate" class="block py-2 text-orange-800 hover:underline">Donate</a>
+                    </div>
+                    <div class="relative group w-full text-center">
+                        <a href="#" class="block py-2 text-orange-800 hover:underline">Others</a>
+                        <div
+                            class="mt-2 w-48 mx-auto bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
+                            <a href="/components/about_us" class="block px-4 py-2 hover:bg-gray-100">About Us</a>
+                            <a href="/components/contact_us" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </nav>
