@@ -57,15 +57,7 @@
 
                         <a href="/standings" class="hover:underline text-orange-800">Table</a>
                         <a href="/components/donate" class="hover:underline text-orange-800">Donate</a>
-                        <div class="relative group w-full text-center">
-                            <a href="#" class="block py-2 text-orange-800 hover:underline">Others</a>
-                            <div
-                                class="mt-2 w-48 mx-auto bg-white text-orange-800 rounded-md shadow-lg hidden group-hover:block">
-                                <a href="/components/about_us" class="block px-4 py-2 hover:bg-gray-100">About Us</a>
-                                <a href="/components/contact_us" class="block px-4 py-2 hover:bg-gray-100">Contact
-                                    Us</a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -76,8 +68,11 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                     </svg>
-                    <div>
-                        <a href="/register" class="text-lg font-semibold">Sign up</a>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="/login"
+                            class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Login</a>
+                        <a href="/register"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Register</a>
                     </div>
                 @endguest
                 @auth
@@ -138,6 +133,14 @@
                 </div>
             </div>
         </div>
+        @guest
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="/login"
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Login</a>
+                <a href="/register"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Register</a>
+            </div>
+        @endguest
     </nav>
 
     <script>
